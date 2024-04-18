@@ -27,9 +27,10 @@ public class BurritosController implements ActionListener{
         switch (e.getActionCommand()) {
             case "Exit":
                 this.burritosGUI.dispose();
-                break;
-            default:
-                throw new AssertionError();
+            break;
+            case "Next":
+                this.burritosGUI.nextBurrito();
+            break;
         }
     }
     

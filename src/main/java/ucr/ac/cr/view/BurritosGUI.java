@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
  */
 public class BurritosGUI extends javax.swing.JFrame {
 
+    private int burrito;
     /**
      * Creates new form BurritosGUI
      */
@@ -19,12 +20,74 @@ public class BurritosGUI extends javax.swing.JFrame {
         initComponents();
         this.setResizable(false);
         this.setLocationRelativeTo(null);
+        burrito=1;
+        inicio();
     }
 
     public void listen(ActionListener controller)
     {
-        this.jButton1.addActionListener(controller);
+        this.btnExit.addActionListener(controller);
+        this.btnNext.addActionListener(controller);
     }
+    
+    public void nextBurrito(){
+         burrito++;
+         
+         if(burrito==1){
+            inicio();
+         }
+         if(burrito==2){
+             jLabelText.setText("Burrito Chimichanga");
+             jLabel1.setVisible(false);
+             jLabel2.setVisible(true);
+             jLabel3.setVisible(false);
+             jLabel4.setVisible(false);
+             jLabel5.setVisible(false);
+             
+         }
+         if(burrito==3){
+             jLabelText.setText("Pork Burrito");
+             jLabel1.setVisible(false);
+             jLabel2.setVisible(false);
+             jLabel3.setVisible(true);
+             jLabel4.setVisible(false);
+             jLabel5.setVisible(false);
+             
+         }
+         if(burrito==4){
+             jLabelText.setText("Big Cheddar");
+             jLabel1.setVisible(false);
+             jLabel2.setVisible(false);
+             jLabel3.setVisible(false);
+             jLabel4.setVisible(true);
+             jLabel5.setVisible(false);
+             
+         }
+         if(burrito==5){
+             jLabelText.setText("Chicken Burrito");
+             jLabel1.setVisible(false);
+             jLabel2.setVisible(false);
+             jLabel3.setVisible(false);
+             jLabel4.setVisible(false);
+             jLabel5.setVisible(true);
+             
+         }
+         if(burrito==6){
+             inicio();
+             burrito=1;
+         }
+         
+     }
+     
+     public void inicio(){
+          jLabelText.setText("Burrito bowl");
+             jLabel1.setVisible(true);
+             jLabel2.setVisible(false);
+             jLabel3.setVisible(false);
+             jLabel4.setVisible(false);
+             jLabel5.setVisible(false);
+     }
+     
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,37 +97,47 @@ public class BurritosGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabelText = new javax.swing.JLabel();
+        btnExit = new javax.swing.JButton();
+        btnNext = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Burritos");
+        jLabelText.setFont(new java.awt.Font("Segoe UI Semibold", 3, 24)); // NOI18N
+        jLabelText.setText("Burritos");
+        getContentPane().add(jLabelText, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 230, 39));
 
-        jButton1.setText("Exit");
+        btnExit.setText("Exit");
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, 75, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(105, 105, 105)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(151, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(jButton1)
-                .addContainerGap(82, Short.MAX_VALUE))
-        );
+        btnNext.setText("Next");
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 490, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Burrito bowl.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Burrito chimichanga.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Pork burrito.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/big cheddar.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/chicken burrito.jpg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
+
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setOpaque(true);
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -75,7 +148,14 @@ public class BurritosGUI extends javax.swing.JFrame {
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnExit;
+    private javax.swing.JButton btnNext;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabelText;
     // End of variables declaration//GEN-END:variables
 }

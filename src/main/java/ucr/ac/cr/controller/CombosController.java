@@ -25,11 +25,12 @@ public class CombosController implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
-            case "jButton1":
+            case "Exit":
                 this.combosGUI.dispose();
-                break;
-            default:
-                throw new AssertionError();
+            break;
+            case "Next":
+                this.combosGUI.nextcombo();
+            break;
         }
     }
     

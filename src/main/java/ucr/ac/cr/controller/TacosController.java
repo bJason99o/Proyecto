@@ -25,11 +25,13 @@ public class TacosController implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         
         switch (e.getActionCommand()) {
-            case "jButton1":
+            case "Exit":
                 this.tacosGUI.dispose();
-                break;
-            default:
-                throw new AssertionError();
+            break;
+            case "Next":
+                this.tacosGUI.nextTaco();
+            break;
+           
         }
     }
     

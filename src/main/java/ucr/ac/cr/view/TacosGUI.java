@@ -15,16 +15,68 @@ public class TacosGUI extends javax.swing.JFrame {
     /**
      * Creates new form TacosGUI
      */
+    private int taco;
     public TacosGUI() {
         initComponents();
-        this.setResizable(false);
+       this.setResizable(false);
         this.setLocationRelativeTo(null);
+        taco=1;
+        inicio();
     }
 
-     public void listen(ActionListener controller)
+     
+     
+      public void listen(ActionListener controller)
     {
-        this.jButton1.addActionListener(controller);
+        this.btnExit.addActionListener(controller);
+        this.btnNext.addActionListener(controller);
     }
+     
+     public void nextTaco(){
+         taco++;
+         
+         if(taco==1){
+            inicio();
+         }
+         if(taco==2){
+             jLabel1.setText("Space Rancher");
+             jLabel2.setVisible(false);
+             jLabel3.setVisible(true);
+             jLabel4.setVisible(false);
+             jLabel5.setVisible(false);
+             
+         }
+         if(taco==3){
+             jLabel1.setText("Blue berry filds");
+             jLabel2.setVisible(false);
+             jLabel3.setVisible(false);
+             jLabel4.setVisible(true);
+             jLabel5.setVisible(false);
+             
+         }
+         if(taco==4){
+             jLabel1.setText("Pig taco");
+             jLabel2.setVisible(false);
+             jLabel3.setVisible(false);
+             jLabel4.setVisible(false);
+             jLabel5.setVisible(true);
+             
+         }
+         if(taco==5){
+             inicio();
+             taco=1;
+         }
+         
+     }
+     
+     public void inicio(){
+          jLabel1.setText("Potato taco");
+             jLabel2.setVisible(true);
+             jLabel3.setVisible(false);
+             jLabel4.setVisible(false);
+             jLabel5.setVisible(false);
+     }
+     
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,37 +86,44 @@ public class TacosGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnExit = new javax.swing.JButton();
+        btnNext = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnExit.setText("Next");
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, 75, -1));
+
+        btnNext.setText("Exit");
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 460, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 3, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel1.setText("Tacos");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 360, 50));
 
-        jButton1.setText("jButton1");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/potatoTaco.jpeg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, 390));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(99, 99, 99)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(201, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(97, 97, 97)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70)
-                .addComponent(jButton1)
-                .addContainerGap(77, Short.MAX_VALUE))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Space Rancher_taco.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, 390));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Blueberryfilds_taco.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, 390));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Pig taco.jpg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, 390));
+
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setOpaque(true);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -75,7 +134,13 @@ public class TacosGUI extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnExit;
+    private javax.swing.JButton btnNext;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }
