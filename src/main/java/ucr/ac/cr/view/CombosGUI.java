@@ -37,16 +37,16 @@ public class CombosGUI extends javax.swing.JFrame {
             inicio();
          }
          if(combo==2){
-             jLabelText.setText("Combo 2");
-             jLabel1.setVisible(false);
-             jLabel2.setVisible(true);
-             jLabel3.setVisible(false);
+             lbNameCombos.setText("Combo 2");
+             lbCombo1.setVisible(false);
+             lbCombo2.setVisible(true);
+             lbCombo3.setVisible(false);
          }
          if(combo==3){
-             jLabelText.setText("Combo 3");
-             jLabel1.setVisible(false);
-             jLabel2.setVisible(false);
-             jLabel3.setVisible(true);
+             lbNameCombos.setText("Combo 3");
+             lbCombo1.setVisible(false);
+             lbCombo2.setVisible(false);
+             lbCombo3.setVisible(true);
          }
          
          if(combo==4){
@@ -57,10 +57,10 @@ public class CombosGUI extends javax.swing.JFrame {
      }
      
      public void inicio(){
-          jLabelText.setText("Combo 1");
-             jLabel1.setVisible(true);
-             jLabel2.setVisible(false);
-             jLabel3.setVisible(false);
+          lbNameCombos.setText("Combo 1");
+             lbCombo1.setVisible(true);
+             lbCombo2.setVisible(false);
+             lbCombo3.setVisible(false);
              
      }
     /**
@@ -72,39 +72,63 @@ public class CombosGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabelText = new javax.swing.JLabel();
+        lbNameCombos = new javax.swing.JLabel();
+        lbBackgroundRed1 = new javax.swing.JLabel();
         btnNext = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lbBackgroundRed2 = new javax.swing.JLabel();
+        lbCombo1 = new javax.swing.JLabel();
+        lbCombo2 = new javax.swing.JLabel();
+        lbCombo3 = new javax.swing.JLabel();
+        lbBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelText.setFont(new java.awt.Font("Segoe UI Semibold", 3, 24)); // NOI18N
-        jLabelText.setText("Combos");
-        getContentPane().add(jLabelText, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 240, 40));
+        lbNameCombos.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
+        lbNameCombos.setForeground(new java.awt.Color(238, 236, 208));
+        lbNameCombos.setText("Combos");
+        getContentPane().add(lbNameCombos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 450, 40));
 
+        lbBackgroundRed1.setBackground(new java.awt.Color(160, 40, 38));
+        lbBackgroundRed1.setOpaque(true);
+        getContentPane().add(lbBackgroundRed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 60));
+
+        btnNext.setBackground(new java.awt.Color(149, 38, 36));
+        btnNext.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnNext.setForeground(new java.awt.Color(238, 236, 208));
         btnNext.setText("Next");
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 530, 75, -1));
+        btnNext.setBorder(null);
+        btnNext.setBorderPainted(false);
+        btnNext.setFocusPainted(false);
+        btnNext.setOpaque(true);
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 540, 70, 40));
 
+        btnExit.setBackground(new java.awt.Color(149, 38, 36));
+        btnExit.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(238, 236, 208));
         btnExit.setText("Exit");
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 530, -1, -1));
+        btnExit.setBorder(null);
+        btnExit.setBorderPainted(false);
+        btnExit.setOpaque(true);
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 540, 60, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/combo 1.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 450));
+        lbBackgroundRed2.setBackground(new java.awt.Color(160, 40, 38));
+        lbBackgroundRed2.setOpaque(true);
+        getContentPane().add(lbBackgroundRed2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 550, 60));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/combo 2.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 450));
+        lbCombo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/combo 1.jpg"))); // NOI18N
+        getContentPane().add(lbCombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 450));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/combo 3.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
+        lbCombo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/combo 2.jpg"))); // NOI18N
+        getContentPane().add(lbCombo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 450));
 
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setOpaque(true);
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 570));
+        lbCombo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/combo 3.jpg"))); // NOI18N
+        getContentPane().add(lbCombo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
+
+        lbBackground.setBackground(new java.awt.Color(255, 255, 255));
+        lbBackground.setOpaque(true);
+        getContentPane().add(lbBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 570));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -117,10 +141,12 @@ public class CombosGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnNext;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabelText;
+    private javax.swing.JLabel lbBackground;
+    private javax.swing.JLabel lbBackgroundRed1;
+    private javax.swing.JLabel lbBackgroundRed2;
+    private javax.swing.JLabel lbCombo1;
+    private javax.swing.JLabel lbCombo2;
+    private javax.swing.JLabel lbCombo3;
+    private javax.swing.JLabel lbNameCombos;
     // End of variables declaration//GEN-END:variables
 }

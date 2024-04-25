@@ -41,6 +41,7 @@ public class MainGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         miSearch = new javax.swing.JMenuItem();
@@ -54,51 +55,74 @@ public class MainGUI extends javax.swing.JFrame {
         miCombos = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logoMenu.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, -1));
+
+        jMenu1.setBackground(new java.awt.Color(164, 42, 39));
+        jMenu1.setForeground(new java.awt.Color(238, 236, 208));
         jMenu1.setText("Home");
+        jMenu1.setOpaque(true);
 
+        miSearch.setBackground(new java.awt.Color(238, 236, 208));
+        miSearch.setFont(new java.awt.Font("Segoe UI Semibold", 3, 14)); // NOI18N
         miSearch.setText("Search");
+        miSearch.setOpaque(true);
         jMenu1.add(miSearch);
 
+        miOrder.setBackground(new java.awt.Color(238, 236, 208));
+        miOrder.setFont(new java.awt.Font("Segoe UI Semibold", 3, 14)); // NOI18N
         miOrder.setText("My Order");
+        miOrder.setOpaque(true);
         jMenu1.add(miOrder);
 
+        miExit.setBackground(new java.awt.Color(238, 236, 208));
+        miExit.setFont(new java.awt.Font("Segoe UI Semibold", 3, 14)); // NOI18N
         miExit.setText("Exit");
+        miExit.setOpaque(true);
         jMenu1.add(miExit);
 
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setBackground(new java.awt.Color(164, 42, 39));
+        jMenu2.setForeground(new java.awt.Color(238, 236, 208));
         jMenu2.setText("Menu");
+        jMenu2.setOpaque(true);
 
+        miBurritos.setBackground(new java.awt.Color(238, 236, 208));
+        miBurritos.setFont(new java.awt.Font("Segoe UI Semibold", 3, 14)); // NOI18N
         miBurritos.setText("Burritos");
+        miBurritos.setOpaque(true);
         jMenu2.add(miBurritos);
 
+        miTacos.setBackground(new java.awt.Color(238, 236, 208));
+        miTacos.setFont(new java.awt.Font("Segoe UI Semibold", 3, 14)); // NOI18N
         miTacos.setText("Tacos");
+        miTacos.setOpaque(true);
         jMenu2.add(miTacos);
 
+        miBeverages.setBackground(new java.awt.Color(238, 236, 208));
+        miBeverages.setFont(new java.awt.Font("Segoe UI Semibold", 3, 14)); // NOI18N
         miBeverages.setText("Beverages");
+        miBeverages.setOpaque(true);
         jMenu2.add(miBeverages);
 
+        miDesserts.setBackground(new java.awt.Color(238, 236, 208));
+        miDesserts.setFont(new java.awt.Font("Segoe UI Semibold", 3, 14)); // NOI18N
         miDesserts.setText("Desserts");
+        miDesserts.setOpaque(true);
         jMenu2.add(miDesserts);
 
+        miCombos.setBackground(new java.awt.Color(238, 236, 208));
+        miCombos.setFont(new java.awt.Font("Segoe UI Semibold", 3, 14)); // NOI18N
         miCombos.setText("Combos");
+        miCombos.setOpaque(true);
         jMenu2.add(miCombos);
 
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -106,39 +130,10 @@ public class MainGUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainGUI().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;

@@ -39,27 +39,27 @@ public class TacosGUI extends javax.swing.JFrame {
             inicio();
          }
          if(taco==2){
-             jLabel1.setText("Space Rancher");
-             jLabel2.setVisible(false);
-             jLabel3.setVisible(true);
-             jLabel4.setVisible(false);
-             jLabel5.setVisible(false);
+             lbNameTaco.setText("Space Rancher");
+             lbPotatoTaco.setVisible(false);
+             lbSpaceRancher.setVisible(true);
+             lbBlueBerryFilds.setVisible(false);
+             lbPigTaco.setVisible(false);
              
          }
          if(taco==3){
-             jLabel1.setText("Blue berry filds");
-             jLabel2.setVisible(false);
-             jLabel3.setVisible(false);
-             jLabel4.setVisible(true);
-             jLabel5.setVisible(false);
+             lbNameTaco.setText("Blue Berry Filds");
+             lbPotatoTaco.setVisible(false);
+             lbSpaceRancher.setVisible(false);
+             lbBlueBerryFilds.setVisible(true);
+             lbPigTaco.setVisible(false);
              
          }
          if(taco==4){
-             jLabel1.setText("Pig taco");
-             jLabel2.setVisible(false);
-             jLabel3.setVisible(false);
-             jLabel4.setVisible(false);
-             jLabel5.setVisible(true);
+             lbNameTaco.setText("Pig Taco");
+             lbPotatoTaco.setVisible(false);
+             lbSpaceRancher.setVisible(false);
+             lbBlueBerryFilds.setVisible(false);
+             lbPigTaco.setVisible(true);
              
          }
          if(taco==5){
@@ -70,11 +70,11 @@ public class TacosGUI extends javax.swing.JFrame {
      }
      
      public void inicio(){
-          jLabel1.setText("Potato taco");
-             jLabel2.setVisible(true);
-             jLabel3.setVisible(false);
-             jLabel4.setVisible(false);
-             jLabel5.setVisible(false);
+          lbNameTaco.setText("Potato Taco");
+             lbPotatoTaco.setVisible(true);
+             lbSpaceRancher.setVisible(false);
+             lbBlueBerryFilds.setVisible(false);
+             lbPigTaco.setVisible(false);
      }
      
     /**
@@ -86,44 +86,69 @@ public class TacosGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lbNameTaco = new javax.swing.JLabel();
+        lbBackgroundRed1 = new javax.swing.JLabel();
         btnExit = new javax.swing.JButton();
         btnNext = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        lbBackgroundRed2 = new javax.swing.JLabel();
+        lbPotatoTaco = new javax.swing.JLabel();
+        lbSpaceRancher = new javax.swing.JLabel();
+        lbBlueBerryFilds = new javax.swing.JLabel();
+        lbPigTaco = new javax.swing.JLabel();
+        lbBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lbNameTaco.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
+        lbNameTaco.setForeground(new java.awt.Color(238, 236, 208));
+        lbNameTaco.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lbNameTaco.setText("Tacos");
+        getContentPane().add(lbNameTaco, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 440, 40));
+
+        lbBackgroundRed1.setBackground(new java.awt.Color(160, 40, 38));
+        lbBackgroundRed1.setOpaque(true);
+        getContentPane().add(lbBackgroundRed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 60));
+
+        btnExit.setBackground(new java.awt.Color(149, 38, 36));
+        btnExit.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(238, 236, 208));
         btnExit.setText("Next");
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, 75, -1));
+        btnExit.setBorder(null);
+        btnExit.setBorderPainted(false);
+        btnExit.setFocusPainted(false);
+        btnExit.setOpaque(true);
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, 70, 40));
 
+        btnNext.setBackground(new java.awt.Color(149, 38, 36));
+        btnNext.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnNext.setForeground(new java.awt.Color(238, 236, 208));
         btnNext.setText("Exit");
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 460, -1, -1));
+        btnNext.setBorder(null);
+        btnNext.setBorderPainted(false);
+        btnNext.setFocusPainted(false);
+        btnNext.setOpaque(true);
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 490, 60, 40));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 3, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText("Tacos");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 360, 50));
+        lbBackgroundRed2.setBackground(new java.awt.Color(160, 40, 38));
+        lbBackgroundRed2.setOpaque(true);
+        getContentPane().add(lbBackgroundRed2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 510, 70));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/potatoTaco.jpeg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, 390));
+        lbPotatoTaco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/potatoTaco.jpeg"))); // NOI18N
+        getContentPane().add(lbPotatoTaco, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, 390));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Space Rancher_taco.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, 390));
+        lbSpaceRancher.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Space Rancher_taco.jpg"))); // NOI18N
+        getContentPane().add(lbSpaceRancher, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, 390));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Blueberryfilds_taco.jpg"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, 390));
+        lbBlueBerryFilds.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Blueberryfilds_taco.jpg"))); // NOI18N
+        getContentPane().add(lbBlueBerryFilds, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, 390));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Pig taco.jpg"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, 390));
+        lbPigTaco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Pig taco.jpg"))); // NOI18N
+        getContentPane().add(lbPigTaco, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, 390));
 
-        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setOpaque(true);
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 550));
+        lbBackground.setBackground(new java.awt.Color(255, 255, 255));
+        lbBackground.setOpaque(true);
+        getContentPane().add(lbBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -136,11 +161,13 @@ public class TacosGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnNext;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel lbBackground;
+    private javax.swing.JLabel lbBackgroundRed1;
+    private javax.swing.JLabel lbBackgroundRed2;
+    private javax.swing.JLabel lbBlueBerryFilds;
+    private javax.swing.JLabel lbNameTaco;
+    private javax.swing.JLabel lbPigTaco;
+    private javax.swing.JLabel lbPotatoTaco;
+    private javax.swing.JLabel lbSpaceRancher;
     // End of variables declaration//GEN-END:variables
 }

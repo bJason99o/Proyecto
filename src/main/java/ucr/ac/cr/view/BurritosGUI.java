@@ -37,39 +37,39 @@ public class BurritosGUI extends javax.swing.JFrame {
             inicio();
          }
          if(burrito==2){
-             jLabelText.setText("Burrito Chimichanga");
-             jLabel1.setVisible(false);
-             jLabel2.setVisible(true);
-             jLabel3.setVisible(false);
-             jLabel4.setVisible(false);
-             jLabel5.setVisible(false);
+             lbNameBurritos.setText("Burrito Chimichanga");
+             lbBurritoBowl.setVisible(false);
+             lbBurritoChimichanga.setVisible(true);
+             lbPorkBurrito.setVisible(false);
+             lbBigCheddarBurrito.setVisible(false);
+             lbChickenBurrito.setVisible(false);
              
          }
          if(burrito==3){
-             jLabelText.setText("Pork Burrito");
-             jLabel1.setVisible(false);
-             jLabel2.setVisible(false);
-             jLabel3.setVisible(true);
-             jLabel4.setVisible(false);
-             jLabel5.setVisible(false);
+             lbNameBurritos.setText("Pork Burrito");
+             lbBurritoBowl.setVisible(false);
+             lbBurritoChimichanga.setVisible(false);
+             lbPorkBurrito.setVisible(true);
+             lbBigCheddarBurrito.setVisible(false);
+             lbChickenBurrito.setVisible(false);
              
          }
          if(burrito==4){
-             jLabelText.setText("Big Cheddar");
-             jLabel1.setVisible(false);
-             jLabel2.setVisible(false);
-             jLabel3.setVisible(false);
-             jLabel4.setVisible(true);
-             jLabel5.setVisible(false);
+             lbNameBurritos.setText("Big Cheddar Burrito");
+             lbBurritoBowl.setVisible(false);
+             lbBurritoChimichanga.setVisible(false);
+             lbPorkBurrito.setVisible(false);
+             lbBigCheddarBurrito.setVisible(true);
+             lbChickenBurrito.setVisible(false);
              
          }
          if(burrito==5){
-             jLabelText.setText("Chicken Burrito");
-             jLabel1.setVisible(false);
-             jLabel2.setVisible(false);
-             jLabel3.setVisible(false);
-             jLabel4.setVisible(false);
-             jLabel5.setVisible(true);
+             lbNameBurritos.setText("Chicken Burrito");
+             lbBurritoBowl.setVisible(false);
+             lbBurritoChimichanga.setVisible(false);
+             lbPorkBurrito.setVisible(false);
+             lbBigCheddarBurrito.setVisible(false);
+             lbChickenBurrito.setVisible(true);
              
          }
          if(burrito==6){
@@ -80,12 +80,12 @@ public class BurritosGUI extends javax.swing.JFrame {
      }
      
      public void inicio(){
-          jLabelText.setText("Burrito bowl");
-             jLabel1.setVisible(true);
-             jLabel2.setVisible(false);
-             jLabel3.setVisible(false);
-             jLabel4.setVisible(false);
-             jLabel5.setVisible(false);
+          lbNameBurritos.setText("Burrito bowl");
+             lbBurritoBowl.setVisible(true);
+             lbBurritoChimichanga.setVisible(false);
+             lbPorkBurrito.setVisible(false);
+             lbBigCheddarBurrito.setVisible(false);
+             lbChickenBurrito.setVisible(false);
      }
      
     /**
@@ -97,47 +97,71 @@ public class BurritosGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabelText = new javax.swing.JLabel();
+        lbNameBurritos = new javax.swing.JLabel();
+        lbBackgroundRed1 = new javax.swing.JLabel();
         btnExit = new javax.swing.JButton();
         btnNext = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        lbBackgroundRed2 = new javax.swing.JLabel();
+        lbBurritoBowl = new javax.swing.JLabel();
+        lbBurritoChimichanga = new javax.swing.JLabel();
+        lbPorkBurrito = new javax.swing.JLabel();
+        lbBigCheddarBurrito = new javax.swing.JLabel();
+        lbChickenBurrito = new javax.swing.JLabel();
+        lbBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelText.setFont(new java.awt.Font("Segoe UI Semibold", 3, 24)); // NOI18N
-        jLabelText.setText("Burritos");
-        getContentPane().add(jLabelText, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 230, 39));
+        lbNameBurritos.setBackground(new java.awt.Color(255, 255, 255));
+        lbNameBurritos.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
+        lbNameBurritos.setForeground(new java.awt.Color(238, 236, 208));
+        lbNameBurritos.setText("Burritos");
+        getContentPane().add(lbNameBurritos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 510, 39));
 
+        lbBackgroundRed1.setBackground(new java.awt.Color(160, 40, 38));
+        lbBackgroundRed1.setOpaque(true);
+        getContentPane().add(lbBackgroundRed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 60));
+
+        btnExit.setBackground(new java.awt.Color(149, 38, 36));
+        btnExit.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(238, 236, 208));
         btnExit.setText("Exit");
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, 75, -1));
+        btnExit.setBorder(null);
+        btnExit.setBorderPainted(false);
+        btnExit.setOpaque(true);
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 490, 60, 40));
 
+        btnNext.setBackground(new java.awt.Color(149, 38, 36));
+        btnNext.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnNext.setForeground(new java.awt.Color(238, 236, 208));
         btnNext.setText("Next");
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 490, -1, -1));
+        btnNext.setBorder(null);
+        btnNext.setBorderPainted(false);
+        btnNext.setFocusPainted(false);
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 490, 70, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Burrito bowl.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
+        lbBackgroundRed2.setBackground(new java.awt.Color(160, 40, 38));
+        lbBackgroundRed2.setOpaque(true);
+        getContentPane().add(lbBackgroundRed2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 560, 60));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Burrito chimichanga.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
+        lbBurritoBowl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Burrito bowl.jpg"))); // NOI18N
+        getContentPane().add(lbBurritoBowl, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Pork burrito.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
+        lbBurritoChimichanga.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Burrito chimichanga.jpg"))); // NOI18N
+        getContentPane().add(lbBurritoChimichanga, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/big cheddar.jpg"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
+        lbPorkBurrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Pork burrito.jpg"))); // NOI18N
+        getContentPane().add(lbPorkBurrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/chicken burrito.jpg"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
+        lbBigCheddarBurrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/big cheddar.jpg"))); // NOI18N
+        getContentPane().add(lbBigCheddarBurrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
 
-        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setOpaque(true);
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
+        lbChickenBurrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/chicken burrito.jpg"))); // NOI18N
+        getContentPane().add(lbChickenBurrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
+
+        lbBackground.setBackground(new java.awt.Color(255, 255, 255));
+        lbBackground.setOpaque(true);
+        getContentPane().add(lbBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -150,12 +174,14 @@ public class BurritosGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnNext;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabelText;
+    private javax.swing.JLabel lbBackground;
+    private javax.swing.JLabel lbBackgroundRed1;
+    private javax.swing.JLabel lbBackgroundRed2;
+    private javax.swing.JLabel lbBigCheddarBurrito;
+    private javax.swing.JLabel lbBurritoBowl;
+    private javax.swing.JLabel lbBurritoChimichanga;
+    private javax.swing.JLabel lbChickenBurrito;
+    private javax.swing.JLabel lbNameBurritos;
+    private javax.swing.JLabel lbPorkBurrito;
     // End of variables declaration//GEN-END:variables
 }
