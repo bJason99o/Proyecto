@@ -29,7 +29,7 @@ public class BeveragesController implements ActionListener{
                 this.beveragesGUI.dispose();
             break;
             case "Next":
-                this.beveragesGUI.dispose();
+                this.beveragesGUI.nextBeverage();
             break;
             
         }
