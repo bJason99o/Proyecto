@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 import ucr.ac.cr.view.MainGUI;
 
-
+//Ale no hace nada
 /**
  *
  * @author Jason
