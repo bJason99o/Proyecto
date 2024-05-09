@@ -13,7 +13,6 @@ import ucr.ac.cr.view.BeveragesGUI;
  * @author Jason
  */
 public class BeveragesController implements ActionListener{
-    
     private BeveragesGUI beveragesGUI;
 
     public BeveragesController() {
