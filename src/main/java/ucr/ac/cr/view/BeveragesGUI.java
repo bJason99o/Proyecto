@@ -204,7 +204,7 @@ public class BeveragesGUI extends javax.swing.JFrame {
         btnNext.setBorder(null);
         btnNext.setBorderPainted(false);
         btnNext.setFocusPainted(false);
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 610, 70, 40));
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 610, 70, 40));
 
         btnExit.setBackground(new java.awt.Color(149, 38, 36));
         btnExit.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
@@ -213,7 +213,7 @@ public class BeveragesGUI extends javax.swing.JFrame {
         btnExit.setBorder(null);
         btnExit.setBorderPainted(false);
         btnExit.setOpaque(true);
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 610, 60, 40));
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 610, 60, 40));
 
         lbBackgroundRed1.setBackground(new java.awt.Color(160, 40, 38));
         lbBackgroundRed1.setOpaque(true);

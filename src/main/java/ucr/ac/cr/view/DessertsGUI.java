@@ -91,7 +91,7 @@ public class DessertsGUI extends javax.swing.JFrame {
         btnExit.setBorder(null);
         btnExit.setBorderPainted(false);
         btnExit.setOpaque(true);
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 480, 60, 40));
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 480, 60, 40));
 
         btnNext.setBackground(new java.awt.Color(149, 38, 36));
         btnNext.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
@@ -101,7 +101,7 @@ public class DessertsGUI extends javax.swing.JFrame {
         btnNext.setBorderPainted(false);
         btnNext.setFocusPainted(false);
         btnNext.setOpaque(true);
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 479, 70, 40));
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 480, 70, 40));
 
         lbBackgroundRed2.setBackground(new java.awt.Color(160, 40, 38));
         lbBackgroundRed2.setOpaque(true);

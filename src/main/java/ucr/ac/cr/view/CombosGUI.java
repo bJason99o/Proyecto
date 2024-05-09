@@ -102,7 +102,7 @@ public class CombosGUI extends javax.swing.JFrame {
         btnNext.setBorderPainted(false);
         btnNext.setFocusPainted(false);
         btnNext.setOpaque(true);
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 540, 70, 40));
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 540, 70, 40));
 
         btnExit.setBackground(new java.awt.Color(149, 38, 36));
         btnExit.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
@@ -111,7 +111,7 @@ public class CombosGUI extends javax.swing.JFrame {
         btnExit.setBorder(null);
         btnExit.setBorderPainted(false);
         btnExit.setOpaque(true);
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 540, 60, 40));
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 540, 60, 40));
 
         lbBackgroundRed2.setBackground(new java.awt.Color(160, 40, 38));
         lbBackgroundRed2.setOpaque(true);
