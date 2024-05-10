@@ -118,7 +118,7 @@ public class TacosGUI extends javax.swing.JFrame {
         btnExit.setBorderPainted(false);
         btnExit.setFocusPainted(false);
         btnExit.setOpaque(true);
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 490, 70, 40));
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, 70, 40));
 
         btnNext.setBackground(new java.awt.Color(149, 38, 36));
         btnNext.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
@@ -128,7 +128,7 @@ public class TacosGUI extends javax.swing.JFrame {
         btnNext.setBorderPainted(false);
         btnNext.setFocusPainted(false);
         btnNext.setOpaque(true);
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, 60, 40));
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 490, 60, 40));
 
         lbBackgroundRed2.setBackground(new java.awt.Color(160, 40, 38));
         lbBackgroundRed2.setOpaque(true);
