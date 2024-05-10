@@ -13,47 +13,100 @@ import java.awt.event.ActionListener;
 public class DessertsGUI extends javax.swing.JFrame {
 
     private int dessert;
-    /**        
+
+    /**
      * Creates new form DessertsGUI
      */
     public DessertsGUI() {
         initComponents();
         this.setResizable(false);
         this.setLocationRelativeTo(null);
-        dessert=1;
+        dessert = 1;
         inicio();
     }
 
-    public void listen(ActionListener controller)
-    {
+    public void listen(ActionListener controller) {
         this.btnExit.addActionListener(controller);
+        this.btnAdd.addActionListener(controller);
         this.btnNext.addActionListener(controller);
+        this.btnPrevious.addActionListener(controller);
     }
-     
-     public void nextDessert(){
-         dessert++;
-         
-         if(dessert==1){
+
+    public void nextDessert() {
+        dessert++;
+
+        if (dessert == 1) {
             inicio();
-         }
-         if(dessert==2){
-             lbNameDesserts.setText("Napoleon");
-             lbChesscurds.setVisible(false);
-             lbNapoleon.setVisible(true);
-         }
-         if(dessert==3){
-             inicio();
-             dessert=1;
-         }
-         
-     }
-     
-     public void inicio(){
-          lbNameDesserts.setText("Chesscurds");
-             lbChesscurds.setVisible(true);
-             lbNapoleon.setVisible(false);
-             
-     }
+        }
+        if (dessert == 2) {
+            lbNameDesserts.setText("Napoleon");
+            lbChesscurds.setVisible(false);
+            lbNapoleon.setVisible(true);
+            lbDesserts.setVisible(false);
+            cbSelectDesserts.setVisible(false);
+            jsQuantity.setVisible(false);
+            btnAdd.setVisible(false);
+        }
+        if (dessert == 3) {
+            lbNameDesserts.setText("Select Dessert");
+            lbChesscurds.setVisible(false);
+            lbNapoleon.setVisible(false);
+            lbDesserts.setVisible(true);
+            cbSelectDesserts.setVisible(true);
+            jsQuantity.setVisible(true);
+            btnAdd.setVisible(true);
+        }
+        if (dessert == 4) {
+            inicio();
+            dessert = 1;
+        }
+
+    }
+
+    public void previousDessert() {
+        dessert--;
+
+        if (dessert == 0) {
+            dessert = 3;
+        }
+
+        if (dessert == 1) {
+            inicio();
+        }
+        if (dessert == 2) {
+            lbNameDesserts.setText("Napoleon");
+            lbChesscurds.setVisible(false);
+            lbNapoleon.setVisible(true);
+            lbDesserts.setVisible(false);
+            cbSelectDesserts.setVisible(false);
+            jsQuantity.setVisible(false);
+            btnAdd.setVisible(false);
+        }
+        if (dessert == 3) {
+            lbNameDesserts.setText("Select Dessert");
+            lbChesscurds.setVisible(false);
+            lbNapoleon.setVisible(false);
+            lbDesserts.setVisible(true);
+            cbSelectDesserts.setVisible(true);
+            jsQuantity.setVisible(true);
+            btnAdd.setVisible(true);
+        }
+        if (dessert == 4) {
+            inicio();
+            dessert = 1;
+        }
+    }
+
+    public void inicio() {
+        lbNameDesserts.setText("Chesscurds");
+        lbChesscurds.setVisible(true);
+        lbNapoleon.setVisible(false);
+        lbDesserts.setVisible(false);
+        cbSelectDesserts.setVisible(false);
+        jsQuantity.setVisible(false);
+        btnAdd.setVisible(false);
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -63,45 +116,82 @@ public class DessertsGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbNameDesserts = new javax.swing.JLabel();
-        lbBackgroundRed1 = new javax.swing.JLabel();
         btnExit = new javax.swing.JButton();
+        lbNameDesserts = new javax.swing.JLabel();
+        btnPrevious = new javax.swing.JButton();
         btnNext = new javax.swing.JButton();
+        cbSelectDesserts = new javax.swing.JComboBox<>();
+        jsQuantity = new javax.swing.JSpinner();
+        btnAdd = new javax.swing.JButton();
+        lbBackgroundRed1 = new javax.swing.JLabel();
         lbBackgroundRed2 = new javax.swing.JLabel();
         lbChesscurds = new javax.swing.JLabel();
         lbNapoleon = new javax.swing.JLabel();
+        lbDesserts = new javax.swing.JLabel();
         lbBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnExit.setBackground(new java.awt.Color(149, 38, 36));
+        btnExit.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(238, 236, 208));
+        btnExit.setText("X");
+        btnExit.setBorder(null);
+        btnExit.setBorderPainted(false);
+        btnExit.setFocusable(false);
+        btnExit.setOpaque(true);
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, 60, 40));
 
         lbNameDesserts.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
         lbNameDesserts.setForeground(new java.awt.Color(238, 236, 208));
         lbNameDesserts.setText("Desserts");
         getContentPane().add(lbNameDesserts, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 440, 40));
 
-        lbBackgroundRed1.setBackground(new java.awt.Color(160, 40, 38));
-        lbBackgroundRed1.setOpaque(true);
-        getContentPane().add(lbBackgroundRed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 60));
-
-        btnExit.setBackground(new java.awt.Color(149, 38, 36));
-        btnExit.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        btnExit.setForeground(new java.awt.Color(238, 236, 208));
-        btnExit.setText("Exit");
-        btnExit.setBorder(null);
-        btnExit.setBorderPainted(false);
-        btnExit.setOpaque(true);
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 480, 60, 40));
+        btnPrevious.setBackground(new java.awt.Color(149, 38, 36));
+        btnPrevious.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnPrevious.setForeground(new java.awt.Color(238, 236, 208));
+        btnPrevious.setText("<");
+        btnPrevious.setBorder(null);
+        btnPrevious.setBorderPainted(false);
+        btnPrevious.setFocusPainted(false);
+        getContentPane().add(btnPrevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 50, -1));
 
         btnNext.setBackground(new java.awt.Color(149, 38, 36));
         btnNext.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         btnNext.setForeground(new java.awt.Color(238, 236, 208));
-        btnNext.setText("Next");
+        btnNext.setText(">");
         btnNext.setBorder(null);
         btnNext.setBorderPainted(false);
         btnNext.setFocusPainted(false);
-        btnNext.setOpaque(true);
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 479, 70, 40));
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, 50, -1));
+
+        cbSelectDesserts.setBackground(new java.awt.Color(102, 38, 36));
+        cbSelectDesserts.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        cbSelectDesserts.setForeground(new java.awt.Color(238, 236, 208));
+        cbSelectDesserts.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Dessert", "Chesscurds", "Napoleon" }));
+        cbSelectDesserts.setBorder(null);
+        cbSelectDesserts.setFocusable(false);
+        cbSelectDesserts.setRequestFocusEnabled(false);
+        getContentPane().add(cbSelectDesserts, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 210, 30));
+
+        jsQuantity.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jsQuantity.setFocusable(false);
+        jsQuantity.setOpaque(true);
+        getContentPane().add(jsQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 490, 60, 30));
+
+        btnAdd.setBackground(new java.awt.Color(149, 38, 36));
+        btnAdd.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(238, 236, 208));
+        btnAdd.setText("Add");
+        btnAdd.setBorder(null);
+        btnAdd.setBorderPainted(false);
+        btnAdd.setFocusPainted(false);
+        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 490, 60, 30));
+
+        lbBackgroundRed1.setBackground(new java.awt.Color(160, 40, 38));
+        lbBackgroundRed1.setOpaque(true);
+        getContentPane().add(lbBackgroundRed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 60));
 
         lbBackgroundRed2.setBackground(new java.awt.Color(160, 40, 38));
         lbBackgroundRed2.setOpaque(true);
@@ -113,6 +203,9 @@ public class DessertsGUI extends javax.swing.JFrame {
         lbNapoleon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Napoleón.jpg"))); // NOI18N
         getContentPane().add(lbNapoleon, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, 390));
 
+        lbDesserts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Desserts.png"))); // NOI18N
+        getContentPane().add(lbDesserts, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, 390));
+
         lbBackground.setBackground(new java.awt.Color(255, 255, 255));
         lbBackground.setOpaque(true);
         getContentPane().add(lbBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 530));
@@ -123,15 +216,19 @@ public class DessertsGUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
- 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnNext;
+    private javax.swing.JButton btnPrevious;
+    private javax.swing.JComboBox<String> cbSelectDesserts;
+    private javax.swing.JSpinner jsQuantity;
     private javax.swing.JLabel lbBackground;
     private javax.swing.JLabel lbBackgroundRed1;
     private javax.swing.JLabel lbBackgroundRed2;
     private javax.swing.JLabel lbChesscurds;
+    private javax.swing.JLabel lbDesserts;
     private javax.swing.JLabel lbNameDesserts;
     private javax.swing.JLabel lbNapoleon;
     // End of variables declaration//GEN-END:variables

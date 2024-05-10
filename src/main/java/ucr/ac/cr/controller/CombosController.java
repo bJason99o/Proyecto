@@ -25,11 +25,17 @@ public class CombosController implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
-            case "Exit":
+            case "X":
                 this.combosGUI.dispose();
             break;
-            case "Next":
-                this.combosGUI.nextcombo();
+            case "Add":
+                this.combosGUI.dispose();
+            break;
+            case ">":
+                this.combosGUI.nextCombo();
+            break;
+            case "<":
+                this.combosGUI.previousCombo();
             break;
         }
     }

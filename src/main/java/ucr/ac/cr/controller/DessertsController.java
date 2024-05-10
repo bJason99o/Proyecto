@@ -25,11 +25,17 @@ public class DessertsController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
-            case "Exit":
+            case "X":
                 this.dessertsGUI.dispose();
             break;
-            case "Next":
+            case "Add":
+                this.dessertsGUI.dispose();
+            break;
+            case ">":
                 this.dessertsGUI.nextDessert();
+            break;
+            case "<":
+                this.dessertsGUI.previousDessert();
             break;
         }
     }

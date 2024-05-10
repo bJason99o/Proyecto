@@ -25,11 +25,17 @@ public class BurritosController implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
-            case "Exit":
+            case "X":
                 this.burritosGUI.dispose();
             break;
-            case "Next":
+            case "Add":
+                this.burritosGUI.dispose();
+            break;
+            case ">":
                 this.burritosGUI.nextBurrito();
+            break;
+            case "<":
+                this.burritosGUI.previousBurrito();
             break;
         }
     }

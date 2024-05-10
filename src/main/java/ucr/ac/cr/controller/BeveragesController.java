@@ -25,11 +25,17 @@ public class BeveragesController implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
-            case "Exit":
+            case "X":
                 this.beveragesGUI.dispose();
             break;
-            case "Next":
+            case "Add":
+                this.beveragesGUI.dispose();
+            break;
+            case ">":
                 this.beveragesGUI.nextBeverage();
+            break;
+            case "<":
+                this.beveragesGUI.previousBeverage();
             break;
             
         }

@@ -25,13 +25,18 @@ public class TacosController implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         
         switch (e.getActionCommand()) {
-            case "Exit":
+            case "X":
                 this.tacosGUI.dispose();
             break;
-            case "Next":
+            case "Add":
+                this.tacosGUI.dispose();
+            break;
+            case ">":
                 this.tacosGUI.nextTaco();
             break;
-           
+           case "<":
+                this.tacosGUI.previousTaco();
+            break;
         }
     }
     

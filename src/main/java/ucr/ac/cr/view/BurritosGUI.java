@@ -13,6 +13,7 @@ import java.awt.event.ActionListener;
 public class BurritosGUI extends javax.swing.JFrame {
 
     private int burrito;
+
     /**
      * Creates new form BurritosGUI
      */
@@ -20,74 +21,179 @@ public class BurritosGUI extends javax.swing.JFrame {
         initComponents();
         this.setResizable(false);
         this.setLocationRelativeTo(null);
-        burrito=1;
+        burrito = 1;
         inicio();
     }
 
-    public void listen(ActionListener controller)
-    {
+    public void listen(ActionListener controller) {
         this.btnExit.addActionListener(controller);
         this.btnNext.addActionListener(controller);
+        this.btnPrevious.addActionListener(controller);
+        this.btnAdd.addActionListener(controller);
     }
-    
-    public void nextBurrito(){
-         burrito++;
-         
-         if(burrito==1){
+
+    public void nextBurrito() {
+        burrito++;
+
+        if (burrito == 1) {
             inicio();
-         }
-         if(burrito==2){
-             lbNameBurritos.setText("Burrito Chimichanga");
-             lbBurritoBowl.setVisible(false);
-             lbBurritoChimichanga.setVisible(true);
-             lbPorkBurrito.setVisible(false);
-             lbBigCheddarBurrito.setVisible(false);
-             lbChickenBurrito.setVisible(false);
-             
-         }
-         if(burrito==3){
-             lbNameBurritos.setText("Pork Burrito");
-             lbBurritoBowl.setVisible(false);
-             lbBurritoChimichanga.setVisible(false);
-             lbPorkBurrito.setVisible(true);
-             lbBigCheddarBurrito.setVisible(false);
-             lbChickenBurrito.setVisible(false);
-             
-         }
-         if(burrito==4){
-             lbNameBurritos.setText("Big Cheddar Burrito");
-             lbBurritoBowl.setVisible(false);
-             lbBurritoChimichanga.setVisible(false);
-             lbPorkBurrito.setVisible(false);
-             lbBigCheddarBurrito.setVisible(true);
-             lbChickenBurrito.setVisible(false);
-             
-         }
-         if(burrito==5){
-             lbNameBurritos.setText("Chicken Burrito");
-             lbBurritoBowl.setVisible(false);
-             lbBurritoChimichanga.setVisible(false);
-             lbPorkBurrito.setVisible(false);
-             lbBigCheddarBurrito.setVisible(false);
-             lbChickenBurrito.setVisible(true);
-             
-         }
-         if(burrito==6){
-             inicio();
-             burrito=1;
-         }
-         
-     }
-     
-     public void inicio(){
-          lbNameBurritos.setText("Burrito bowl");
-             lbBurritoBowl.setVisible(true);
-             lbBurritoChimichanga.setVisible(false);
-             lbPorkBurrito.setVisible(false);
-             lbBigCheddarBurrito.setVisible(false);
-             lbChickenBurrito.setVisible(false);
-     }
-     
+        }
+        if (burrito == 2) {
+            lbNameBurritos.setText("Burrito Chimichanga");
+            lbBurritoBowl.setVisible(false);
+            lbBurritoChimichanga.setVisible(true);
+            lbPorkBurrito.setVisible(false);
+            lbBigCheddarBurrito.setVisible(false);
+            lbChickenBurrito.setVisible(false);
+            lbBurritos.setVisible(false);
+            cbSelectBurrito.setVisible(false);
+            jsQuantity.setVisible(false);
+            btnAdd.setVisible(false);
+        }
+        if (burrito == 3) {
+            lbNameBurritos.setText("Pork Burrito");
+            lbBurritoBowl.setVisible(false);
+            lbBurritoChimichanga.setVisible(false);
+            lbPorkBurrito.setVisible(true);
+            lbBigCheddarBurrito.setVisible(false);
+            lbChickenBurrito.setVisible(false);
+            lbBurritos.setVisible(false);
+            cbSelectBurrito.setVisible(false);
+            jsQuantity.setVisible(false);
+            btnAdd.setVisible(false);
+        }
+        if (burrito == 4) {
+            lbNameBurritos.setText("Big Cheddar Burrito");
+            lbBurritoBowl.setVisible(false);
+            lbBurritoChimichanga.setVisible(false);
+            lbPorkBurrito.setVisible(false);
+            lbBigCheddarBurrito.setVisible(true);
+            lbChickenBurrito.setVisible(false);
+            lbBurritos.setVisible(false);
+            cbSelectBurrito.setVisible(false);
+            jsQuantity.setVisible(false);
+            btnAdd.setVisible(false);
+        }
+        if (burrito == 5) {
+            lbNameBurritos.setText("Chicken Burrito");
+            lbBurritoBowl.setVisible(false);
+            lbBurritoChimichanga.setVisible(false);
+            lbPorkBurrito.setVisible(false);
+            lbBigCheddarBurrito.setVisible(false);
+            lbChickenBurrito.setVisible(true);
+            lbBurritos.setVisible(false);
+            cbSelectBurrito.setVisible(false);
+            jsQuantity.setVisible(false);
+            btnAdd.setVisible(false);
+        }
+        if (burrito == 6) {
+            lbNameBurritos.setText("Select Burrito");
+            lbBurritoBowl.setVisible(false);
+            lbBurritoChimichanga.setVisible(false);
+            lbPorkBurrito.setVisible(false);
+            lbBigCheddarBurrito.setVisible(false);
+            lbChickenBurrito.setVisible(false);
+            lbBurritos.setVisible(true);
+            cbSelectBurrito.setVisible(true);
+            jsQuantity.setVisible(true);
+            btnAdd.setVisible(true);
+        }
+        if (burrito == 7) {
+            inicio();
+            burrito = 1;
+        }
+
+    }
+
+    public void previousBurrito() {
+        burrito--;
+
+        if (burrito == 0) {
+            burrito = 6; // Si burrito llega a 0, lo reiniciamos a 6 para retroceder desde el principio
+        }
+
+        if (burrito == 1) {
+            inicio();
+        }
+        if (burrito == 2) {
+            lbNameBurritos.setText("Burrito Chimichanga");
+            lbBurritoBowl.setVisible(false);
+            lbBurritoChimichanga.setVisible(true);
+            lbPorkBurrito.setVisible(false);
+            lbBigCheddarBurrito.setVisible(false);
+            lbChickenBurrito.setVisible(false);
+            lbBurritos.setVisible(false);
+            cbSelectBurrito.setVisible(false);
+            jsQuantity.setVisible(false);
+            btnAdd.setVisible(false);
+        }
+        if (burrito == 3) {
+            lbNameBurritos.setText("Pork Burrito");
+            lbBurritoBowl.setVisible(false);
+            lbBurritoChimichanga.setVisible(false);
+            lbPorkBurrito.setVisible(true);
+            lbBigCheddarBurrito.setVisible(false);
+            lbChickenBurrito.setVisible(false);
+            lbBurritos.setVisible(false);
+            cbSelectBurrito.setVisible(false);
+            jsQuantity.setVisible(false);
+            btnAdd.setVisible(false);
+        }
+        if (burrito == 4) {
+            lbNameBurritos.setText("Big Cheddar Burrito");
+            lbBurritoBowl.setVisible(false);
+            lbBurritoChimichanga.setVisible(false);
+            lbPorkBurrito.setVisible(false);
+            lbBigCheddarBurrito.setVisible(true);
+            lbChickenBurrito.setVisible(false);
+            lbBurritos.setVisible(false);
+            cbSelectBurrito.setVisible(false);
+            jsQuantity.setVisible(false);
+            btnAdd.setVisible(false);
+        }
+        if (burrito == 5) {
+            lbNameBurritos.setText("Chicken Burrito");
+            lbBurritoBowl.setVisible(false);
+            lbBurritoChimichanga.setVisible(false);
+            lbPorkBurrito.setVisible(false);
+            lbBigCheddarBurrito.setVisible(false);
+            lbChickenBurrito.setVisible(true);
+            lbBurritos.setVisible(false);
+            cbSelectBurrito.setVisible(false);
+            jsQuantity.setVisible(false);
+            btnAdd.setVisible(false);
+        }
+        if (burrito == 6) {
+            lbNameBurritos.setText("Select Burrito");
+            lbBurritoBowl.setVisible(false);
+            lbBurritoChimichanga.setVisible(false);
+            lbPorkBurrito.setVisible(false);
+            lbBigCheddarBurrito.setVisible(false);
+            lbChickenBurrito.setVisible(false);
+            lbBurritos.setVisible(true);
+            cbSelectBurrito.setVisible(true);
+            jsQuantity.setVisible(true);
+            btnAdd.setVisible(true);
+        }
+        if (burrito == 7) {
+            inicio();
+            burrito = 1;
+        }
+    }
+
+    public void inicio() {
+        lbNameBurritos.setText("Burrito bowl");
+        lbBurritoBowl.setVisible(true);
+        lbBurritoChimichanga.setVisible(false);
+        lbPorkBurrito.setVisible(false);
+        lbBigCheddarBurrito.setVisible(false);
+        lbChickenBurrito.setVisible(false);
+        lbBurritos.setVisible(false);
+        cbSelectBurrito.setVisible(false);
+        jsQuantity.setVisible(false);
+        btnAdd.setVisible(false);
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -97,11 +203,16 @@ public class BurritosGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnExit = new javax.swing.JButton();
         lbNameBurritos = new javax.swing.JLabel();
         lbBackgroundRed1 = new javax.swing.JLabel();
-        btnExit = new javax.swing.JButton();
         btnNext = new javax.swing.JButton();
+        btnPrevious = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
+        cbSelectBurrito = new javax.swing.JComboBox<>();
+        jsQuantity = new javax.swing.JSpinner();
         lbBackgroundRed2 = new javax.swing.JLabel();
+        lbBurritos = new javax.swing.JLabel();
         lbBurritoBowl = new javax.swing.JLabel();
         lbBurritoChimichanga = new javax.swing.JLabel();
         lbPorkBurrito = new javax.swing.JLabel();
@@ -111,6 +222,16 @@ public class BurritosGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnExit.setBackground(new java.awt.Color(149, 38, 36));
+        btnExit.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(238, 236, 208));
+        btnExit.setText("X");
+        btnExit.setBorder(null);
+        btnExit.setBorderPainted(false);
+        btnExit.setFocusable(false);
+        btnExit.setOpaque(true);
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, 60, 40));
 
         lbNameBurritos.setBackground(new java.awt.Color(255, 255, 255));
         lbNameBurritos.setFont(new java.awt.Font("Trebuchet MS", 3, 36)); // NOI18N
@@ -122,27 +243,53 @@ public class BurritosGUI extends javax.swing.JFrame {
         lbBackgroundRed1.setOpaque(true);
         getContentPane().add(lbBackgroundRed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 60));
 
-        btnExit.setBackground(new java.awt.Color(149, 38, 36));
-        btnExit.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        btnExit.setForeground(new java.awt.Color(238, 236, 208));
-        btnExit.setText("Exit");
-        btnExit.setBorder(null);
-        btnExit.setBorderPainted(false);
-        btnExit.setOpaque(true);
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 490, 60, 40));
-
         btnNext.setBackground(new java.awt.Color(149, 38, 36));
         btnNext.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         btnNext.setForeground(new java.awt.Color(238, 236, 208));
-        btnNext.setText("Next");
+        btnNext.setText(">");
         btnNext.setBorder(null);
         btnNext.setBorderPainted(false);
         btnNext.setFocusPainted(false);
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 490, 70, 40));
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, 50, -1));
+
+        btnPrevious.setBackground(new java.awt.Color(149, 38, 36));
+        btnPrevious.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnPrevious.setForeground(new java.awt.Color(238, 236, 208));
+        btnPrevious.setText("<");
+        btnPrevious.setBorder(null);
+        btnPrevious.setBorderPainted(false);
+        btnPrevious.setFocusPainted(false);
+        getContentPane().add(btnPrevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 50, -1));
+
+        btnAdd.setBackground(new java.awt.Color(149, 38, 36));
+        btnAdd.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(238, 236, 208));
+        btnAdd.setText("Add");
+        btnAdd.setBorder(null);
+        btnAdd.setBorderPainted(false);
+        btnAdd.setFocusPainted(false);
+        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 490, 60, 30));
+
+        cbSelectBurrito.setBackground(new java.awt.Color(102, 38, 36));
+        cbSelectBurrito.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        cbSelectBurrito.setForeground(new java.awt.Color(238, 236, 208));
+        cbSelectBurrito.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Burrito", "Burrito Bowl", "Burrito Chimichanga", "Pork Burrito", "Big Cheddar Burrito", "Chicken Burrito" }));
+        cbSelectBurrito.setBorder(null);
+        cbSelectBurrito.setFocusable(false);
+        cbSelectBurrito.setRequestFocusEnabled(false);
+        getContentPane().add(cbSelectBurrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 210, 30));
+
+        jsQuantity.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jsQuantity.setFocusable(false);
+        jsQuantity.setOpaque(true);
+        getContentPane().add(jsQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 490, 60, 30));
 
         lbBackgroundRed2.setBackground(new java.awt.Color(160, 40, 38));
         lbBackgroundRed2.setOpaque(true);
         getContentPane().add(lbBackgroundRed2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 560, 60));
+
+        lbBurritos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Burritos.png"))); // NOI18N
+        getContentPane().add(lbBurritos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, -1, -1));
 
         lbBurritoBowl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Burrito bowl.jpg"))); // NOI18N
         getContentPane().add(lbBurritoBowl, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
@@ -169,17 +316,21 @@ public class BurritosGUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
- 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnNext;
+    private javax.swing.JButton btnPrevious;
+    private javax.swing.JComboBox<String> cbSelectBurrito;
+    private javax.swing.JSpinner jsQuantity;
     private javax.swing.JLabel lbBackground;
     private javax.swing.JLabel lbBackgroundRed1;
     private javax.swing.JLabel lbBackgroundRed2;
     private javax.swing.JLabel lbBigCheddarBurrito;
     private javax.swing.JLabel lbBurritoBowl;
     private javax.swing.JLabel lbBurritoChimichanga;
+    private javax.swing.JLabel lbBurritos;
     private javax.swing.JLabel lbChickenBurrito;
     private javax.swing.JLabel lbNameBurritos;
     private javax.swing.JLabel lbPorkBurrito;
