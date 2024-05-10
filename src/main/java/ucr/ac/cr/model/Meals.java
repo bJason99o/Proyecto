@@ -11,16 +11,16 @@ package ucr.ac.cr.model;
 public class Meals {
     private String idMeal;
     private String name;
-    private String description;
+    private int quantity;
     private double price;
 
     public Meals() {
     }
 
-    public Meals(String idMeal, String name, String description, double price) {
+    public Meals(String idMeal, String name, int quantity, double price) {
         this.idMeal = idMeal;
         this.name = name;
-        this.description = description;
+        this.quantity = quantity;
         this.price = price;
     }
 
@@ -40,12 +40,12 @@ public class Meals {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public double getPrice() {
@@ -58,7 +58,7 @@ public class Meals {
 
     @Override
     public String toString() {
-        return "Meals{" + "idMeal=" + idMeal + ", name=" + name + ", description=" + description + ", price=" + price + '}';
+        return "Meals{" + "idMeal=" + idMeal + ", name=" + name + ", quantity=" + quantity + ", price=" + price + '}';
     }
     
     
