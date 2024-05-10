@@ -418,7 +418,7 @@ public class BeveragesGUI extends javax.swing.JFrame {
         btnPrevious.setBorder(null);
         btnPrevious.setBorderPainted(false);
         btnPrevious.setFocusPainted(false);
-        getContentPane().add(btnPrevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, 50, -1));
+        getContentPane().add(btnPrevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 610, 50, -1));
 
         btnExit.setBackground(new java.awt.Color(149, 38, 36));
         btnExit.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
@@ -437,7 +437,7 @@ public class BeveragesGUI extends javax.swing.JFrame {
         btnNext.setBorder(null);
         btnNext.setBorderPainted(false);
         btnNext.setFocusPainted(false);
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 610, 50, -1));
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 610, 50, -1));
 
         btnAdd.setBackground(new java.awt.Color(149, 38, 36));
         btnAdd.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
@@ -446,7 +446,7 @@ public class BeveragesGUI extends javax.swing.JFrame {
         btnAdd.setBorder(null);
         btnAdd.setBorderPainted(false);
         btnAdd.setFocusPainted(false);
-        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 610, 60, 30));
+        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 610, 60, 30));
 
         cbSelectBeverage.setBackground(new java.awt.Color(102, 38, 36));
         cbSelectBeverage.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
@@ -455,12 +455,12 @@ public class BeveragesGUI extends javax.swing.JFrame {
         cbSelectBeverage.setBorder(null);
         cbSelectBeverage.setFocusable(false);
         cbSelectBeverage.setRequestFocusEnabled(false);
-        getContentPane().add(cbSelectBeverage, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 610, 230, 30));
+        getContentPane().add(cbSelectBeverage, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, 230, 30));
 
         jsQuantity.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jsQuantity.setFocusable(false);
         jsQuantity.setOpaque(true);
-        getContentPane().add(jsQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 610, 60, 30));
+        getContentPane().add(jsQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 610, 60, 30));
 
         lbBackgroundRed1.setBackground(new java.awt.Color(160, 40, 38));
         lbBackgroundRed1.setOpaque(true);

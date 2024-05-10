@@ -182,7 +182,7 @@ public class CombosGUI extends javax.swing.JFrame {
         btnPrevious.setBorder(null);
         btnPrevious.setBorderPainted(false);
         btnPrevious.setFocusPainted(false);
-        getContentPane().add(btnPrevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 50, -1));
+        getContentPane().add(btnPrevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 540, 50, -1));
 
         btnNext.setBackground(new java.awt.Color(149, 38, 36));
         btnNext.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
@@ -191,7 +191,7 @@ public class CombosGUI extends javax.swing.JFrame {
         btnNext.setBorder(null);
         btnNext.setBorderPainted(false);
         btnNext.setFocusPainted(false);
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 540, 50, -1));
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 540, 50, -1));
 
         cbSelectCombos.setBackground(new java.awt.Color(102, 38, 36));
         cbSelectCombos.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
@@ -200,12 +200,12 @@ public class CombosGUI extends javax.swing.JFrame {
         cbSelectCombos.setBorder(null);
         cbSelectCombos.setFocusable(false);
         cbSelectCombos.setRequestFocusEnabled(false);
-        getContentPane().add(cbSelectCombos, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 540, 210, 30));
+        getContentPane().add(cbSelectCombos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 210, 30));
 
         jsQuantity.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jsQuantity.setFocusable(false);
         jsQuantity.setOpaque(true);
-        getContentPane().add(jsQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 540, 60, 30));
+        getContentPane().add(jsQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 540, 60, 30));
 
         btnAdd.setBackground(new java.awt.Color(149, 38, 36));
         btnAdd.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
@@ -214,7 +214,7 @@ public class CombosGUI extends javax.swing.JFrame {
         btnAdd.setBorder(null);
         btnAdd.setBorderPainted(false);
         btnAdd.setFocusPainted(false);
-        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 540, 60, 30));
+        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 540, 60, 30));
 
         lbBackgroundRed1.setBackground(new java.awt.Color(160, 40, 38));
         lbBackgroundRed1.setOpaque(true);

@@ -155,7 +155,7 @@ public class DessertsGUI extends javax.swing.JFrame {
         btnPrevious.setBorder(null);
         btnPrevious.setBorderPainted(false);
         btnPrevious.setFocusPainted(false);
-        getContentPane().add(btnPrevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 50, -1));
+        getContentPane().add(btnPrevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 490, 50, -1));
 
         btnNext.setBackground(new java.awt.Color(149, 38, 36));
         btnNext.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
@@ -164,7 +164,7 @@ public class DessertsGUI extends javax.swing.JFrame {
         btnNext.setBorder(null);
         btnNext.setBorderPainted(false);
         btnNext.setFocusPainted(false);
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, 50, -1));
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 490, 50, -1));
 
         cbSelectDesserts.setBackground(new java.awt.Color(102, 38, 36));
         cbSelectDesserts.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
@@ -173,12 +173,12 @@ public class DessertsGUI extends javax.swing.JFrame {
         cbSelectDesserts.setBorder(null);
         cbSelectDesserts.setFocusable(false);
         cbSelectDesserts.setRequestFocusEnabled(false);
-        getContentPane().add(cbSelectDesserts, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 210, 30));
+        getContentPane().add(cbSelectDesserts, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 210, 30));
 
         jsQuantity.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jsQuantity.setFocusable(false);
         jsQuantity.setOpaque(true);
-        getContentPane().add(jsQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 490, 60, 30));
+        getContentPane().add(jsQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 490, 60, 30));
 
         btnAdd.setBackground(new java.awt.Color(149, 38, 36));
         btnAdd.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
@@ -187,7 +187,7 @@ public class DessertsGUI extends javax.swing.JFrame {
         btnAdd.setBorder(null);
         btnAdd.setBorderPainted(false);
         btnAdd.setFocusPainted(false);
-        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 490, 60, 30));
+        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 490, 60, 30));
 
         lbBackgroundRed1.setBackground(new java.awt.Color(160, 40, 38));
         lbBackgroundRed1.setOpaque(true);

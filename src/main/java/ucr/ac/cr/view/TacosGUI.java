@@ -179,11 +179,11 @@ public class TacosGUI extends javax.swing.JFrame {
         btnAdd = new javax.swing.JButton();
         lbBackgroundRed1 = new javax.swing.JLabel();
         lbBackgroundRed2 = new javax.swing.JLabel();
-        lbTacos = new javax.swing.JLabel();
         lbPotatoTaco = new javax.swing.JLabel();
         lbSpaceRancher = new javax.swing.JLabel();
         lbBlueBerryFilds = new javax.swing.JLabel();
         lbPigTaco = new javax.swing.JLabel();
+        lbTacos = new javax.swing.JLabel();
         lbBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -213,7 +213,7 @@ public class TacosGUI extends javax.swing.JFrame {
         btnPrevious.setBorder(null);
         btnPrevious.setBorderPainted(false);
         btnPrevious.setFocusPainted(false);
-        getContentPane().add(btnPrevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 50, -1));
+        getContentPane().add(btnPrevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 490, 50, -1));
 
         btnNext.setBackground(new java.awt.Color(149, 38, 36));
         btnNext.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
@@ -222,7 +222,7 @@ public class TacosGUI extends javax.swing.JFrame {
         btnNext.setBorder(null);
         btnNext.setBorderPainted(false);
         btnNext.setFocusPainted(false);
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, 50, -1));
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 490, 50, -1));
 
         cbSelectTaco.setBackground(new java.awt.Color(102, 38, 36));
         cbSelectTaco.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
@@ -231,12 +231,12 @@ public class TacosGUI extends javax.swing.JFrame {
         cbSelectTaco.setBorder(null);
         cbSelectTaco.setFocusable(false);
         cbSelectTaco.setRequestFocusEnabled(false);
-        getContentPane().add(cbSelectTaco, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 210, 30));
+        getContentPane().add(cbSelectTaco, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 210, 30));
 
         jsQuantity.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jsQuantity.setFocusable(false);
         jsQuantity.setOpaque(true);
-        getContentPane().add(jsQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 490, 60, 30));
+        getContentPane().add(jsQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 60, 30));
 
         btnAdd.setBackground(new java.awt.Color(149, 38, 36));
         btnAdd.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
@@ -245,7 +245,7 @@ public class TacosGUI extends javax.swing.JFrame {
         btnAdd.setBorder(null);
         btnAdd.setBorderPainted(false);
         btnAdd.setFocusPainted(false);
-        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 490, 60, 30));
+        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 490, 60, 30));
 
         lbBackgroundRed1.setBackground(new java.awt.Color(160, 40, 38));
         lbBackgroundRed1.setOpaque(true);
@@ -254,9 +254,6 @@ public class TacosGUI extends javax.swing.JFrame {
         lbBackgroundRed2.setBackground(new java.awt.Color(160, 40, 38));
         lbBackgroundRed2.setOpaque(true);
         getContentPane().add(lbBackgroundRed2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 550, 70));
-
-        lbTacos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Tacos.png"))); // NOI18N
-        getContentPane().add(lbTacos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 390));
 
         lbPotatoTaco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/potatoTaco.jpeg"))); // NOI18N
         getContentPane().add(lbPotatoTaco, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 390));
@@ -269,6 +266,9 @@ public class TacosGUI extends javax.swing.JFrame {
 
         lbPigTaco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Pig taco.jpg"))); // NOI18N
         getContentPane().add(lbPigTaco, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 390));
+
+        lbTacos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Tacos.png"))); // NOI18N
+        getContentPane().add(lbTacos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 390));
 
         lbBackground.setBackground(new java.awt.Color(255, 255, 255));
         lbBackground.setOpaque(true);

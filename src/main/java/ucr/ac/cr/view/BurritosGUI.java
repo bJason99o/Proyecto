@@ -212,12 +212,12 @@ public class BurritosGUI extends javax.swing.JFrame {
         cbSelectBurrito = new javax.swing.JComboBox<>();
         jsQuantity = new javax.swing.JSpinner();
         lbBackgroundRed2 = new javax.swing.JLabel();
-        lbBurritos = new javax.swing.JLabel();
         lbBurritoBowl = new javax.swing.JLabel();
         lbBurritoChimichanga = new javax.swing.JLabel();
         lbPorkBurrito = new javax.swing.JLabel();
         lbBigCheddarBurrito = new javax.swing.JLabel();
         lbChickenBurrito = new javax.swing.JLabel();
+        lbBurritos = new javax.swing.JLabel();
         lbBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -250,7 +250,7 @@ public class BurritosGUI extends javax.swing.JFrame {
         btnNext.setBorder(null);
         btnNext.setBorderPainted(false);
         btnNext.setFocusPainted(false);
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, 50, -1));
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 490, 50, -1));
 
         btnPrevious.setBackground(new java.awt.Color(149, 38, 36));
         btnPrevious.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
@@ -259,7 +259,7 @@ public class BurritosGUI extends javax.swing.JFrame {
         btnPrevious.setBorder(null);
         btnPrevious.setBorderPainted(false);
         btnPrevious.setFocusPainted(false);
-        getContentPane().add(btnPrevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 50, -1));
+        getContentPane().add(btnPrevious, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 490, 50, -1));
 
         btnAdd.setBackground(new java.awt.Color(149, 38, 36));
         btnAdd.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
@@ -268,7 +268,7 @@ public class BurritosGUI extends javax.swing.JFrame {
         btnAdd.setBorder(null);
         btnAdd.setBorderPainted(false);
         btnAdd.setFocusPainted(false);
-        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 490, 60, 30));
+        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 490, 60, 30));
 
         cbSelectBurrito.setBackground(new java.awt.Color(102, 38, 36));
         cbSelectBurrito.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
@@ -277,19 +277,16 @@ public class BurritosGUI extends javax.swing.JFrame {
         cbSelectBurrito.setBorder(null);
         cbSelectBurrito.setFocusable(false);
         cbSelectBurrito.setRequestFocusEnabled(false);
-        getContentPane().add(cbSelectBurrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 210, 30));
+        getContentPane().add(cbSelectBurrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 210, 30));
 
         jsQuantity.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jsQuantity.setFocusable(false);
         jsQuantity.setOpaque(true);
-        getContentPane().add(jsQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 490, 60, 30));
+        getContentPane().add(jsQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 490, 60, 30));
 
         lbBackgroundRed2.setBackground(new java.awt.Color(160, 40, 38));
         lbBackgroundRed2.setOpaque(true);
         getContentPane().add(lbBackgroundRed2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 560, 60));
-
-        lbBurritos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Burritos.png"))); // NOI18N
-        getContentPane().add(lbBurritos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, -1, -1));
 
         lbBurritoBowl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Burrito bowl.jpg"))); // NOI18N
         getContentPane().add(lbBurritoBowl, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
@@ -305,6 +302,9 @@ public class BurritosGUI extends javax.swing.JFrame {
 
         lbChickenBurrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/chicken burrito.jpg"))); // NOI18N
         getContentPane().add(lbChickenBurrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 400));
+
+        lbBurritos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Burritos.png"))); // NOI18N
+        getContentPane().add(lbBurritos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, -1, -1));
 
         lbBackground.setBackground(new java.awt.Color(255, 255, 255));
         lbBackground.setOpaque(true);
