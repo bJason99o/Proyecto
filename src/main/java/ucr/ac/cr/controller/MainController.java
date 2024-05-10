@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 import ucr.ac.cr.view.MainGUI;
 
-//Ale no hace nada
+
 /**
  *
  * @author Jason
@@ -22,6 +22,7 @@ public class MainController implements ActionListener{
     private BeveragesController beveragesController;
     private DessertsController dessertsController;
     private CombosController combosController;
+    private MyOrderController myOrderController;
 
     public MainController() {
     this.mainGUI= new MainGUI();
@@ -47,6 +48,9 @@ public class MainController implements ActionListener{
             break;
             case "Combos":
                 this.combosController= new CombosController();
+            break;
+            case "My Order":
+                this.myOrderController=new MyOrderController();
             break;
             case "Exit":
                 System.exit(0);

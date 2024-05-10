@@ -2,19 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ucr.ac.cr.controller.listas;
+package ucr.ac.cr.model;
 
 /**
  *
  * @author alehe
  */
-public class ListasController {
+public class List {
     
 
 private int longitud;
 private Nodo cabeza;
 
-public ListasController()
+public List()
 {
     longitud = 0;
     cabeza = null;
