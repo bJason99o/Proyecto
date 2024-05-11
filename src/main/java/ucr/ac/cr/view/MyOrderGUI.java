@@ -7,6 +7,9 @@ package ucr.ac.cr.view;
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
@@ -14,6 +17,9 @@ import javax.swing.JTextField;
  */
 public class MyOrderGUI extends javax.swing.JFrame {
 
+    
+    TableRowSorter<TableModel> sorter;
+    
     /**
      * Creates new form MyOrderGUI
      */
@@ -29,6 +35,17 @@ public class MyOrderGUI extends javax.swing.JFrame {
         this.btnDelete.addActionListener(controller);
         this.txtOrder.addActionListener(controller);
     }
+    
+    public void setTable(String[] header, String[][] data) {
+        DefaultTableModel model = new DefaultTableModel(data, header);
+        this.jTable1.setModel(model);
+        this.jTable1.setAutoCreateRowSorter(true);
+        this.sorter=new TableRowSorter<>(model);
+        this.jTable1.setRowSorter(sorter);
+        
+        this.jScrollPane1.setViewportView(this.jTable1);
+    }
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
