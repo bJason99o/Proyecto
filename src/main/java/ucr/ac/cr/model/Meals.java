@@ -16,6 +16,9 @@ public class Meals {
 
     public Meals() {
     }
+    
+    public static final String[] HEADER_MEALS = {"Id Meal", "Name","Quantity" , "Price"};
+    
 
     public Meals(String idMeal, String name, int quantity, double price) {
         this.idMeal = idMeal;

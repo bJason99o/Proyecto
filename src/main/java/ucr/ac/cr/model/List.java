@@ -149,6 +149,19 @@ public void eliminarPosicion(int posicion)
 
 }
 
+public String[][] getMatrixMeals() {
+    String[][] matrixMeals = new String[longitud][Meals.HEADER_MEALS.length];
+    Nodo nodo = cabeza;
+    for (int i = 0; i < longitud; i++) {
+        for (int j = 0; j < Meals.HEADER_MEALS.length; j++) {
+            matrixMeals[i][j] = nodo.obtenerMeals(i);
+        }
+        nodo = nodo.getSiguiente();
+    }
+    return matrixMeals;
+}
+
+
 public String toString()
 {
     String datosLista = "";

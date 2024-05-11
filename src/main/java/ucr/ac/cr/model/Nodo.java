@@ -10,7 +10,8 @@ package ucr.ac.cr.model;
  */
 public class Nodo {
     private int dato;
-private Nodo siguiente;
+    private Meals comida;
+    private Nodo siguiente;
 
 public Nodo(int dato)
 {
@@ -32,6 +33,20 @@ public Nodo getSiguiente()
 {
     return siguiente;
 }
+
+public String obtenerMeals(int indice) {
+        if (comida != null) {
+            switch(indice) {
+                case 0: return comida.getIdMeal();
+                case 1: return comida.getName();
+                case 2: return String.valueOf(comida.getQuantity());
+                case 3: return String.valueOf(comida.getPrice());
+                default: return "";
+            }
+        } else {
+            return "";
+        }
+    }
 
 public void setSiguiente(Nodo siguiente)
 {
