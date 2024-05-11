@@ -23,19 +23,19 @@ public class MyOrderController implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         myOrderGUI.setVisible(true);
         
-        /*switch (e.getActionCommand()) {
-            case "X":
-                this.tacosGUI.dispose();
+        switch (e.getActionCommand()) {
+            case "Eliminar":
+                
             break;
             case "Add":
-                this.tacosGUI.dispose();
+                
             break;
             case ">":
-                this.tacosGUI.nextTaco();
+                
             break;
            case "<":
-                this.tacosGUI.previousTaco();
+                
             break;
-        }*/
+        }
     }
 }
