@@ -16,6 +16,7 @@ private Nodo cabeza;
 
 public List()
 {
+ 
     longitud = 0;
     cabeza = null;
 }
