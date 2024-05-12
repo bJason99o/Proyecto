@@ -3,11 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package ucr.ac.cr.controller;
-
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import ucr.ac.cr.view.BurritosGUI;
-
+import ucr.ac.cr.model.List;
 /**
  *
  * @author Jason
@@ -15,8 +16,10 @@ import ucr.ac.cr.view.BurritosGUI;
 public class BurritosController implements ActionListener{
 
     private BurritosGUI burritosGUI;
+    private List list;
 
     public BurritosController() {
+         
     this.burritosGUI= new BurritosGUI();
     this.burritosGUI.setVisible(true);
     this.burritosGUI.listen(this);
@@ -30,6 +33,9 @@ public class BurritosController implements ActionListener{
             break;
             case "Add":
                 this.burritosGUI.dispose();
+                String dato= burritosGUI.getTipo();
+                list.insertarPrincipio(dato);                
+        
             break;
             case ">":
                 this.burritosGUI.nextBurrito();

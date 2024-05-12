@@ -7,6 +7,7 @@ package ucr.ac.cr.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import ucr.ac.cr.view.DessertsGUI;
+import ucr.ac.cr.model.List;
 
 /**
  *
@@ -14,7 +15,7 @@ import ucr.ac.cr.view.DessertsGUI;
  */
 public class DessertsController implements ActionListener {
     private DessertsGUI dessertsGUI;
-
+    private List list;
     public DessertsController() {
         this.dessertsGUI= new DessertsGUI();
         this.dessertsGUI.setVisible(true);
@@ -30,6 +31,8 @@ public class DessertsController implements ActionListener {
             break;
             case "Add":
                 this.dessertsGUI.dispose();
+                String dato= dessertsGUI.getTipo();
+                list.insertarPrincipio(dato);
             break;
             case ">":
                 this.dessertsGUI.nextDessert();

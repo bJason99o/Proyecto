@@ -3,18 +3,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package ucr.ac.cr.controller;
-//hola, prueba
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import ucr.ac.cr.view.BeveragesGUI;
-
+import ucr.ac.cr.model.List;
 /**
  *
  * @author Jason
  */
 public class BeveragesController implements ActionListener{
     private BeveragesGUI beveragesGUI;
-
+  private List list;
     public BeveragesController() {
         this.beveragesGUI= new BeveragesGUI();
         this.beveragesGUI.setVisible(true);
@@ -30,6 +31,9 @@ public class BeveragesController implements ActionListener{
             break;
             case "Add":
                 this.beveragesGUI.dispose();
+                String dato= beveragesGUI.getTipo();
+                list.insertarPrincipio(dato);  
+                
             break;
             case ">":
                 this.beveragesGUI.nextBeverage();

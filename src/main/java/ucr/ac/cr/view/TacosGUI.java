@@ -160,6 +160,9 @@ public class TacosGUI extends javax.swing.JFrame {
         jsQuantity.setVisible(false);
         btnAdd.setVisible(false);
     }
+    public String getTipo(){
+        return this.cbSelectTaco.getSelectedItem().toString();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

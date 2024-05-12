@@ -21,7 +21,7 @@ public List()
     cabeza = null;
 }
 
-public void insertarPrincipio(int dato)
+public void insertarPrincipio(String dato)
 {
     Nodo nodo = new Nodo(dato);
     nodo.setSiguiente(cabeza);
@@ -29,7 +29,7 @@ public void insertarPrincipio(int dato)
     longitud++;
 }
 
-public void insertarFinal(int dato)
+public void insertarFinal(String dato)
 {
     Nodo nodo = new Nodo(dato);
     if (cabeza == null) {
@@ -44,7 +44,7 @@ public void insertarFinal(int dato)
     longitud++;
 }
 
-public void insertarDespues(int posicion, int valor)
+public void insertarDespues(int posicion, String valor)
 {
     Nodo nodo = new Nodo(valor);
     if (cabeza == null) {
@@ -65,10 +65,10 @@ public void insertarDespues(int posicion, int valor)
 
 }
 
-public int getDato(int posicion)
+public String getDato(int posicion)
 {
     if (cabeza == null) {
-        return -1;
+        return null;
     } else {
         Nodo puntero = cabeza;
         int contador = 0;
@@ -77,7 +77,7 @@ public int getDato(int posicion)
             contador++;
         }
         if (contador != posicion) {
-            return -1;
+            return null;
         } else {
             return puntero.getDato();
         }

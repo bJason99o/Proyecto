@@ -5,6 +5,9 @@
 package ucr.ac.cr.view;
 
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import java.awt.event.ActionEvent;
 
 /**
  *
@@ -193,6 +196,18 @@ public class BurritosGUI extends javax.swing.JFrame {
         jsQuantity.setVisible(false);
         btnAdd.setVisible(false);
     }
+    public JButton getBtnAdd() {
+        return this.btnAdd;
+    }
+
+    public JComboBox<String> getCbSelectBurrito() {
+        JComboBox<String> cbSelectBurrito = null;
+        return cbSelectBurrito;
+    }
+    public String getTipo(){
+        return this.cbSelectBurrito.getSelectedItem().toString();
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.

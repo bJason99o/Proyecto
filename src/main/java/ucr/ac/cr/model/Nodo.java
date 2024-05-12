@@ -9,22 +9,22 @@ package ucr.ac.cr.model;
  * @author alehe
  */
 public class Nodo {
-    private int dato;
+    private String dato;
     private Meals comida;
     private Nodo siguiente;
 
-public Nodo(int dato)
+public Nodo(String dato)
 {
     this.dato = dato;
     siguiente = null;
 }
 
-public int getDato()
+public String getDato()
 {
     return dato;
 }
 
-public void setDato(int dato)
+public void setDato(String dato)
 {
     this.dato = dato;
 }

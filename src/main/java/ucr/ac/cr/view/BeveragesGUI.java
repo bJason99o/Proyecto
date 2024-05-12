@@ -340,6 +340,9 @@ public class BeveragesGUI extends javax.swing.JFrame {
         jsQuantity.setVisible(false);
         btnAdd.setVisible(false);
     }
+    public String getTipo(){
+        return this.cbSelectBeverage.getSelectedItem().toString();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

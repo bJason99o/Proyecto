@@ -4,9 +4,11 @@
 
 package ucr.ac.cr.hungryhippietacosgit;
 
+
 import ucr.ac.cr.controller.LoginController;
-import ucr.ac.cr.controller.MainController;
+
 import ucr.ac.cr.model.List;
+
 
 /**
  *
@@ -17,6 +19,7 @@ public class HungryHippieTacosGIT {
     public static void main(String[] args) {
         LoginController loginController = new LoginController();
         List list=new List();
+        
     }
    
 }

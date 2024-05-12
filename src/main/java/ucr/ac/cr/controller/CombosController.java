@@ -7,6 +7,7 @@ package ucr.ac.cr.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import ucr.ac.cr.view.CombosGUI;
+import ucr.ac.cr.model.List;
 
 /**
  *
@@ -14,6 +15,7 @@ import ucr.ac.cr.view.CombosGUI;
  */
 public class CombosController implements ActionListener{
     private CombosGUI combosGUI;
+      private List list;
 
     public CombosController() {
     this.combosGUI= new CombosGUI();
@@ -27,6 +29,8 @@ public class CombosController implements ActionListener{
         switch (e.getActionCommand()) {
             case "X":
                 this.combosGUI.dispose();
+                String dato= combosGUI.getTipo();
+                list.insertarPrincipio(dato);
             break;
             case "Add":
                 this.combosGUI.dispose();

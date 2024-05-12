@@ -7,14 +7,14 @@ package ucr.ac.cr.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import ucr.ac.cr.view.TacosGUI;
-
+import ucr.ac.cr.model.List;
 /**
  *
  * @author Jason
  */
 public class TacosController implements ActionListener{
     private TacosGUI tacosGUI;
-
+    private List list;
     public TacosController() {
     this.tacosGUI= new TacosGUI();
     this.tacosGUI.setVisible(true);
@@ -30,6 +30,8 @@ public class TacosController implements ActionListener{
             break;
             case "Add":
                 this.tacosGUI.dispose();
+                String dato= tacosGUI.getTipo();
+                list.insertarPrincipio(dato);
             break;
             case ">":
                 this.tacosGUI.nextTaco();
