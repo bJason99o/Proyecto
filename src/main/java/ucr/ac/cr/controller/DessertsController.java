@@ -31,6 +31,7 @@ public class DessertsController implements ActionListener {
             break;
             case "Add":
                 this.dessertsGUI.dispose();
+                List list=new List();
                 String dato= dessertsGUI.getTipo();
                 list.insertarPrincipio(dato);
             break;

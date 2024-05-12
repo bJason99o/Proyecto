@@ -16,6 +16,7 @@ import ucr.ac.cr.model.List;
 public class BeveragesController implements ActionListener{
     private BeveragesGUI beveragesGUI;
   private List list;
+  
     public BeveragesController() {
         this.beveragesGUI= new BeveragesGUI();
         this.beveragesGUI.setVisible(true);
@@ -30,6 +31,7 @@ public class BeveragesController implements ActionListener{
                 this.beveragesGUI.dispose();
             break;
             case "Add":
+                List list=new List();
                 this.beveragesGUI.dispose();
                 String dato= beveragesGUI.getTipo();
                 list.insertarPrincipio(dato);  

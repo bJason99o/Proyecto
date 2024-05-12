@@ -23,6 +23,7 @@ public List()
 
 public void insertarPrincipio(String dato)
 {
+    List list=new List();
     Nodo nodo = new Nodo(dato);
     nodo.setSiguiente(cabeza);
     cabeza = nodo;
@@ -68,7 +69,7 @@ public void insertarDespues(int posicion, String valor)
 public String getDato(int posicion)
 {
     if (cabeza == null) {
-        return null;
+        return "";
     } else {
         Nodo puntero = cabeza;
         int contador = 0;
@@ -77,7 +78,7 @@ public String getDato(int posicion)
             contador++;
         }
         if (contador != posicion) {
-            return null;
+            return "";
         } else {
             return puntero.getDato();
         }

@@ -28,12 +28,15 @@ public class CombosController implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "X":
+                
+                this.combosGUI.dispose();
+                
+            break;
+            case "Add":
+                List list=new List();
                 this.combosGUI.dispose();
                 String dato= combosGUI.getTipo();
                 list.insertarPrincipio(dato);
-            break;
-            case "Add":
-                this.combosGUI.dispose();
             break;
             case ">":
                 this.combosGUI.nextCombo();
