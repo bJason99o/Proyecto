@@ -45,58 +45,31 @@ public class LoginGUI extends javax.swing.JFrame {
         txtUser = new javax.swing.JTextField();
         jpPassword = new javax.swing.JPasswordField();
         btnJoin = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel1.setText("Welcome to Hungry Hippie Tacos");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jlUser.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         jlUser.setText("User:");
+        getContentPane().add(jlUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, -1));
 
         jlPassword.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         jlPassword.setText("Password:");
+        getContentPane().add(jlPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, -1, -1));
+        getContentPane().add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 171, -1));
+        getContentPane().add(jpPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 171, -1));
 
         btnJoin.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         btnJoin.setText("Join");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlUser)
-                            .addComponent(jlPassword))
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnJoin)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtUser)
-                                .addComponent(jpPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)))))
-                .addContainerGap(61, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel1)
-                .addGap(77, 77, 77)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlUser)
-                    .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlPassword)
-                    .addComponent(jpPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addComponent(btnJoin)
-                .addGap(32, 32, 32))
-        );
+        getContentPane().add(btnJoin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 30, 20));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 70, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -140,6 +113,8 @@ public class LoginGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnJoin;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jlPassword;
     private javax.swing.JLabel jlUser;
     private javax.swing.JPasswordField jpPassword;
