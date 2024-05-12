@@ -48,13 +48,16 @@ public class LoginGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         jLabel1.setText("Welcome to Hungry Hippie Tacos");
 
+        jlUser.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         jlUser.setText("User:");
 
+        jlPassword.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         jlPassword.setText("Password:");
 
+        btnJoin.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
         btnJoin.setText("Join");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -75,7 +78,7 @@ public class LoginGUI extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(txtUser)
                                 .addComponent(jpPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)))))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,7 +93,7 @@ public class LoginGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlPassword)
                     .addComponent(jpPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addComponent(btnJoin)
                 .addGap(32, 32, 32))
         );
