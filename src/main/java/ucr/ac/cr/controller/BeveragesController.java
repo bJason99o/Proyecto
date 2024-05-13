@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import ucr.ac.cr.view.BeveragesGUI;
 import ucr.ac.cr.model.List;
+import ucr.ac.cr.model.Meals;
 /**
  *
  * @author Jason
@@ -32,11 +33,11 @@ public class BeveragesController implements ActionListener{
                 this.beveragesGUI.dispose();
             break;
             case "Add":
-                
-//                String dato= beveragesGUI.getTipo();
-//                list.insertarPrincipio(dato);  
-//                this.beveragesGUI.dispose();
-                
+                  String dato= beveragesGUI.getTipo();
+                int cantidad = beveragesGUI.getCantidad();
+                Meals comida = new Meals(dato, dato, cantidad, cantidad);
+                list.insertarPrincipio(dato, comida);                
+                this.beveragesGUI.dispose();
             break;
             case ">":
                 this.beveragesGUI.nextBeverage();

@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import ucr.ac.cr.view.TacosGUI;
 import ucr.ac.cr.model.List;
+import ucr.ac.cr.model.Meals;
 /**
  *
  * @author Jason
@@ -31,10 +32,11 @@ public class TacosController implements ActionListener{
                 this.tacosGUI.dispose();
             break;
             case "Add":
-                
-//                String dato= tacosGUI.getTipo();
-//                list.insertarPrincipio(dato);
-//                this.tacosGUI.dispose();
+               String dato= tacosGUI.getTipo();
+                int cantidad = tacosGUI.getCantidad();
+                Meals comida = new Meals(dato, dato, cantidad, cantidad);
+                list.insertarPrincipio(dato, comida);                
+                this.tacosGUI.dispose();
                 
             break;
             case ">":

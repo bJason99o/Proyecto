@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import ucr.ac.cr.view.CombosGUI;
 import ucr.ac.cr.model.List;
+import ucr.ac.cr.model.Meals;
 
 /**
  *
@@ -34,10 +35,13 @@ public class CombosController implements ActionListener{
                 
             break;
             case "Add":
+                 
+                String dato= combosGUI.getTipo();
+                int cantidad = combosGUI.getCantidad();
+                Meals comida = new Meals(dato, dato, cantidad, cantidad);
+                list.insertarPrincipio(dato, comida);                
+                this.combosGUI.dispose();
                 
-//                String dato= combosGUI.getTipo();
-//                list.insertarPrincipio(dato);
-//                this.combosGUI.dispose();
                 
             break;
             case ">":
