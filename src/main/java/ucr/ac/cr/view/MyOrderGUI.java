@@ -6,6 +6,7 @@ package ucr.ac.cr.view;
 
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
@@ -36,6 +37,30 @@ public class MyOrderGUI extends javax.swing.JFrame {
         this.txtOrder.addActionListener(controller);
     }
     
+    public int getprice(){
+        int[] price= new int[jTable1.getRowCount()];
+        int priceTotal=0;
+                
+        for (int i = 0; i < jTable1.getRowCount(); i++) {
+            
+            Object celda=jTable1.getValueAt(i, 3);
+            if(celda != null){
+                    String celdaString=celda.toString();
+                try {
+                        price[i] = Integer.parseInt(celdaString);
+                        priceTotal += price[i];
+                }
+                catch (NumberFormatException e) {
+                    System.err.println("celda String no es un dato de valor entero");
+                    
+            }
+                System.err.println("la celda esta vacia");    
+            }
+        }
+        
+        return priceTotal;
+    }
+    
     public void setTable(String[] header, String[][] data) {
         DefaultTableModel model = new DefaultTableModel(data, header);
         this.jTable1.setModel(model);
@@ -44,6 +69,12 @@ public class MyOrderGUI extends javax.swing.JFrame {
         this.jTable1.setRowSorter(sorter);
         
         this.jScrollPane1.setViewportView(this.jTable1);
+    }
+    
+    
+    public JTable getjTable1() {
+        return jTable1;
+        
     }
     
     
@@ -58,16 +89,36 @@ public class MyOrderGUI extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         txtOrder = new javax.swing.JTextField();
-        btnDelete = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
+        lbBackgroundRed1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        btnDelete = new javax.swing.JButton();
+        btnDelete1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Eliminar numero de orden:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 170, 24));
+        getContentPane().add(txtOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, 102, -1));
 
-        btnDelete.setText("ELIMINAR");
+        btnExit.setBackground(new java.awt.Color(149, 38, 36));
+        btnExit.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(238, 236, 208));
+        btnExit.setText("X");
+        btnExit.setActionCommand("devolverse");
+        btnExit.setBorder(null);
+        btnExit.setBorderPainted(false);
+        btnExit.setFocusable(false);
+        btnExit.setOpaque(true);
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 40, 40));
+
+        lbBackgroundRed1.setBackground(new java.awt.Color(160, 40, 38));
+        lbBackgroundRed1.setOpaque(true);
+        getContentPane().add(lbBackgroundRed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 60));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -80,46 +131,45 @@ public class MyOrderGUI extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnDelete))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDelete))
-                .addGap(43, 43, 43))
-        );
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 399, 276));
+
+        btnDelete.setText("ELIMINAR");
+        btnDelete.setActionCommand("Eliminar");
+        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 500, -1, -1));
+
+        btnDelete1.setText("Precio Total");
+        btnDelete1.setActionCommand("price");
+        getContentPane().add(btnDelete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 500, -1, -1));
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setOpaque(true);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        int selectedRow = jTable1.getSelectedRow();
+        txtOrder.setText(String.valueOf((selectedRow+1)));
+    }//GEN-LAST:event_jTable1MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnDelete1;
+    private javax.swing.JButton btnExit;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JLabel lbBackgroundRed1;
     private javax.swing.JTextField txtOrder;
     // End of variables declaration//GEN-END:variables
 }

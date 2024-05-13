@@ -5,6 +5,8 @@
 package ucr.ac.cr.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import ucr.ac.cr.model.List;
 import ucr.ac.cr.model.Meals;
 import ucr.ac.cr.view.MyOrderGUI;
@@ -13,10 +15,11 @@ import ucr.ac.cr.view.MyOrderGUI;
  * @author alehe
  */
 public class MyOrderController implements ActionListener{
-    private MyOrderGUI myOrderGUI;
+   private MyOrderGUI myOrderGUI;
     private List list;
+    private DefaultTableModel tableModel;
     
-
+    
     public MyOrderController(List list) {
     this.list = list;
     this.myOrderGUI= new MyOrderGUI();
@@ -31,16 +34,18 @@ public class MyOrderController implements ActionListener{
         
         switch (e.getActionCommand()) {
             case "Eliminar":
+                int selectedRow = myOrderGUI.getjTable1().getSelectedRow();
+                if (selectedRow != -1) {
+                    tableModel.removeRow(selectedRow);
+                    
+                }
+            break;
+            case "price":
+               JOptionPane.showMessageDialog(null, myOrderGUI.getprice());
                 
             break;
-            case "Add":
-                
-            break;
-            case ">":
-                
-            break;
-           case "<":
-                
+           case "devolverse":
+                this.myOrderGUI.dispose();
             break;
         }
     }
