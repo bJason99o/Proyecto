@@ -5,7 +5,6 @@
 package ucr.ac.cr.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import ucr.ac.cr.model.List;
 import ucr.ac.cr.model.Meals;
@@ -37,9 +36,11 @@ public class MyOrderController implements ActionListener{
             case "Eliminar":
                 int selectedRow = myOrderGUI.getjTable1().getSelectedRow();
                 if (selectedRow != -1) {
-                    tableModel.removeRow(selectedRow);
+                    tableModel.removeRow(selectedRow); 
+                    list.eliminarPosicion(selectedRow);
                     
                 }
+                
             break;
             
            case "devolverse":
