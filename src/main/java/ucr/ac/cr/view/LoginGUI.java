@@ -39,7 +39,7 @@ public class LoginGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jlUser = new javax.swing.JLabel();
         jlPassword = new javax.swing.JLabel();
         txtUser = new javax.swing.JTextField();
@@ -47,29 +47,33 @@ public class LoginGUI extends javax.swing.JFrame {
         btnJoin = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+
+        jLabel4.setText("jLabel4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
-        jLabel1.setText("Welcome to Hungry Hippie Tacos");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
-
-        jlUser.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jlUser.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        jlUser.setForeground(new java.awt.Color(238, 236, 208));
         jlUser.setText("User:");
-        getContentPane().add(jlUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, -1));
+        getContentPane().add(jlUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, -1, -1));
 
-        jlPassword.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        jlPassword.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        jlPassword.setForeground(new java.awt.Color(238, 236, 208));
         jlPassword.setText("Password:");
-        getContentPane().add(jlPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, -1, -1));
-        getContentPane().add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 171, -1));
-        getContentPane().add(jpPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 171, -1));
+        getContentPane().add(jlPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, -1, -1));
+        getContentPane().add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, 171, -1));
+        getContentPane().add(jpPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 171, -1));
 
-        btnJoin.setFont(new java.awt.Font("Trebuchet MS", 3, 12)); // NOI18N
+        btnJoin.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
         btnJoin.setText("Join");
-        getContentPane().add(btnJoin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, -1, -1));
+        getContentPane().add(btnJoin, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, 90, 30));
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 30, 20));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 70, 30));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/prueba.png"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -112,9 +116,10 @@ public class LoginGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnJoin;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jlPassword;
     private javax.swing.JLabel jlUser;
     private javax.swing.JPasswordField jpPassword;
