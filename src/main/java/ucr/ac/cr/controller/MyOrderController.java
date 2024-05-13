@@ -15,17 +15,17 @@ import ucr.ac.cr.view.MyOrderGUI;
  * @author alehe
  */
 public class MyOrderController implements ActionListener{
-   private MyOrderGUI myOrderGUI;
+    private MyOrderGUI myOrderGUI;
     private List list;
     private DefaultTableModel tableModel;
-    
-    
+
     public MyOrderController(List list) {
-    this.list = list;
-    this.myOrderGUI= new MyOrderGUI();
-    this.myOrderGUI.setTable(Meals.HEADER_MEALS, this.list.getMatrixMeals());
-    this.myOrderGUI.setVisible(true);
-    this.myOrderGUI.listen(this);
+        this.list = list;
+        this.myOrderGUI= new MyOrderGUI();
+        this.myOrderGUI.setTable(Meals.HEADER_MEALS, this.list.getMatrixMeals());
+        this.tableModel = (DefaultTableModel) myOrderGUI.getjTable1().getModel();
+        this.myOrderGUI.setVisible(true);
+        this.myOrderGUI.listen(this);
     }
 
     @Override

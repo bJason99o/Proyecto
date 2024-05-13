@@ -35,6 +35,7 @@ public class MyOrderGUI extends javax.swing.JFrame {
     public void listen(ActionListener controller) {
         this.btnDelete.addActionListener(controller);
         this.txtOrder.addActionListener(controller);
+        this.btnExit.addActionListener(controller);
     }
     
     public int getprice(){
@@ -61,6 +62,7 @@ public class MyOrderGUI extends javax.swing.JFrame {
         return priceTotal;
     }
     
+    
     public void setTable(String[] header, String[][] data) {
         DefaultTableModel model = new DefaultTableModel(data, header);
         this.jTable1.setModel(model);
@@ -70,8 +72,7 @@ public class MyOrderGUI extends javax.swing.JFrame {
         
         this.jScrollPane1.setViewportView(this.jTable1);
     }
-    
-    
+
     public JTable getjTable1() {
         return jTable1;
         
