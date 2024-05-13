@@ -14,15 +14,16 @@ import ucr.ac.cr.view.LoginGUI;
  * @author Jeikol
  */
 public class LoginController implements ActionListener {
-private LoginGUI loginGUI;
 
-   public LoginController() {
+    private LoginGUI loginGUI;
+
+    public LoginController() {
         this.loginGUI = new LoginGUI();
         this.loginGUI.setVisible(true);
-         this.loginGUI.addJoinButtonListener(this);
+        this.loginGUI.addJoinButtonListener(this);
     }
 
-  public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("Join")) {
             String user = "tacos";
             String password = "hungry";
@@ -39,4 +40,3 @@ private LoginGUI loginGUI;
         }
     }
 }
-

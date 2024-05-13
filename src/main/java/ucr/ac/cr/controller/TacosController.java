@@ -41,8 +41,7 @@ public class TacosController implements ActionListener{
                 jsonClass.saveLinkedListToJson(list);
                 tacosGUI.clean();
                 System.out.println(list);
-                System.out.println(jsonClass.loadMealsFromJson());
-                
+                System.out.println(jsonClass.loadMealsFromJson());   
             break;
             case ">":
                 this.tacosGUI.nextTaco();

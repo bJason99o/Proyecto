@@ -9,6 +9,7 @@ package ucr.ac.cr.model;
  * @author Jason
  */
 public class Meals {
+
     private String idMeal;
     private String name;
     private int quantity;
@@ -16,9 +17,8 @@ public class Meals {
 
     public Meals() {
     }
-    
-    public static final String[] HEADER_MEALS = {"Id Meal", "Name","Quantity" , "Price"};
-    
+
+    public static final String[] HEADER_MEALS = {"Id Meal", "Name", "Quantity", "Price"};
 
     public Meals(String idMeal, String name, int quantity, double price) {
         this.idMeal = idMeal;
@@ -63,6 +63,5 @@ public class Meals {
     public String toString() {
         return "Meals{" + "idMeal=" + idMeal + ", name=" + name + ", quantity=" + quantity + ", price=" + price + '}';
     }
-    
-    
+
 }

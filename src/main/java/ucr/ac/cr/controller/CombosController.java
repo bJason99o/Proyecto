@@ -32,9 +32,7 @@ private JsonClass jsonClass;
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "X":
-                
                 this.combosGUI.dispose();
-                
             break;
             case "Add":
                  
@@ -45,8 +43,6 @@ private JsonClass jsonClass;
                 combosGUI.clean();
                 System.out.println(list);
                 System.out.println(jsonClass.loadMealsFromJson());;
-                
-                
             break;
             case ">":
                 this.combosGUI.nextCombo();

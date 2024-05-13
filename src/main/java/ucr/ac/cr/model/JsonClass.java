@@ -31,7 +31,7 @@ public class JsonClass {
     public void appendJsonToFile(ArrayList<Meals> mealList) {
         JSONArray jsonArray = new JSONArray();
 
-        // Leer el contenido actual del archivo y agregarlo al jsonArray si existe
+       
         JSONParser jsonParser = new JSONParser();
         try (FileReader reader = new FileReader(filePath)) {
             Object obj = jsonParser.parse(reader);
@@ -42,17 +42,14 @@ public class JsonClass {
             JOptionPane.showMessageDialog(null, "Error al leer el archivo JSON");
             e.printStackTrace();
         }
-
-        // Agregar los nuevos objetos JSON al jsonArray con detección de duplicados
         for (Meals meal : mealList) {
-    if (meal != null) { // Verificar si meal no es null
+    if (meal != null) { 
         JSONObject newObject = new JSONObject();
         newObject.put("idMeal", meal.getIdMeal());
         newObject.put("name", meal.getName());
         newObject.put("quantity", meal.getQuantity());
         newObject.put("price", meal.getPrice());
 
-        // Detección de duplicados
         if (!isDuplicate(jsonArray, meal.getIdMeal())) {
             jsonArray.add(newObject);
         } else {
@@ -62,8 +59,6 @@ public class JsonClass {
         JOptionPane.showMessageDialog(null, "Error: objeto Meals es nulo.");
     }
 }
-
-        // Escribir el jsonArray al archivo JSON
         try (FileWriter file = new FileWriter(filePath)) {
             file.write(jsonArray.toJSONString());
             file.flush();
@@ -72,16 +67,14 @@ public class JsonClass {
             e.printStackTrace();
         }
     }
-
-// Método para verificar si un código de barras ya existe en el jsonArray
     public boolean isDuplicate(JSONArray jsonArray, String idMeal) {
         for (Object object : jsonArray) {
             JSONObject jsonObject = (JSONObject) object;
             if (idMeal.equals(jsonObject.get("idMeal"))) {
-                return true; // Encontrado duplicado
+                return true; 
             }
         }
-        return false; // No encontrado duplicado
+        return false;
     }
 
     public ArrayList<Meals> loadMealsFromJson() {
@@ -96,27 +89,23 @@ public class JsonClass {
                 JSONObject jsonObject = (JSONObject) object;
                 String idMeal = (String) jsonObject.get("idMeal");
                 String name = (String) jsonObject.get("name");
-
-                // Verificar si el campo "price" está presente y no es null
                 Object priceObject = jsonObject.get("price");
-                double price = 0.0; // Valor por defecto si no se puede obtener el precio correctamente
+                double price = 0.0; 
                 if (priceObject != null) {
                     try {
-                        price = Double.parseDouble(priceObject.toString()); // Convertir el objeto a cadena y luego a double
+                        price = Double.parseDouble(priceObject.toString()); 
                     } catch (NumberFormatException e) {
-                        // Manejo de excepción si el valor no es un número válido
                         e.printStackTrace();
                     }
                 }
 
                 Object quantityObject = jsonObject.get("quantity");
-                int quantity = 0; // Valor por defecto si no se puede obtener el precio correctamente
+                int quantity = 0; 
 
                 if (quantityObject != null) {
                     try {
-                        quantity = ((Long) quantityObject).intValue(); // Convertir Long a int
+                        quantity = ((Long) quantityObject).intValue();
                     } catch (NumberFormatException e) {
-                        // Manejo de excepción si el valor no es un número válido
                         e.printStackTrace();
                     }
                 }
@@ -138,7 +127,7 @@ public class JsonClass {
     JSONObject jsonObject = new JSONObject();
     Meals meal = current.getMeal();
 
-    if (meal != null) { // Verificar si meal no es null
+    if (meal != null) { 
         jsonObject.put("idMeal", meal.getIdMeal());
         jsonObject.put("name", meal.getName());
         jsonObject.put("quantity", meal.getQuantity());
@@ -146,15 +135,11 @@ public class JsonClass {
 
         jsonArray.add(jsonObject);
     } else {
-        // Manejo de casos donde meal es nulo, como lanzar una excepción o imprimir un mensaje de advertencia
         System.out.println("Warning: Found a null meal object in the linked list.");
     }
 
     current = current.getSiguiente();
 }
-
-
-    // Escribir el jsonArray al archivo JSON
     try (FileWriter file = new FileWriter(filePath)) {
         file.write(jsonArray.toJSONString());
         file.flush();

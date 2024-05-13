@@ -4,8 +4,6 @@
  */
 package ucr.ac.cr.controller;
 
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import ucr.ac.cr.model.JsonClass;
