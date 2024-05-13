@@ -33,6 +33,7 @@ public class MyOrderController implements ActionListener{
         myOrderGUI.setVisible(true);
         
         switch (e.getActionCommand()) {
+            
             case "Eliminar":
                 int selectedRow = myOrderGUI.getjTable1().getSelectedRow();
                 if (selectedRow != -1) {
@@ -40,10 +41,7 @@ public class MyOrderController implements ActionListener{
                     
                 }
             break;
-            case "price":
-               JOptionPane.showMessageDialog(null, myOrderGUI.getprice());
-                
-            break;
+            
            case "devolverse":
                 this.myOrderGUI.dispose();
             break;

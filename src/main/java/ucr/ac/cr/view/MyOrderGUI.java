@@ -6,6 +6,7 @@ package ucr.ac.cr.view;
 
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -26,6 +27,7 @@ public class MyOrderGUI extends javax.swing.JFrame {
      */
     public MyOrderGUI() {
         initComponents();
+        txtOrder.setEnabled(false);
     }
 
     public JTextField getTxtOrder() {
@@ -38,27 +40,27 @@ public class MyOrderGUI extends javax.swing.JFrame {
         this.btnExit.addActionListener(controller);
     }
     
-    public int getprice(){
-        int[] price= new int[jTable1.getRowCount()];
-        int priceTotal=0;
-                
+    public double getprice(){
+        double[] price= new double[jTable1.getRowCount()];
+        
+        double priceTotal=0.0;
+        
         for (int i = 0; i < jTable1.getRowCount(); i++) {
-            
             Object celda=jTable1.getValueAt(i, 3);
             if(celda != null){
                     String celdaString=celda.toString();
                 try {
-                        price[i] = Integer.parseInt(celdaString);
+                        price[i] = Double.parseDouble(celdaString);
                         priceTotal += price[i];
                 }
                 catch (NumberFormatException e) {
                     System.err.println("celda String no es un dato de valor entero");
                     
             }
-                System.err.println("la celda esta vacia");    
+                
             }
+            
         }
-        
         return priceTotal;
     }
     
@@ -147,7 +149,12 @@ public class MyOrderGUI extends javax.swing.JFrame {
 
         btnDelete1.setText("Precio Total");
         btnDelete1.setActionCommand("price");
-        getContentPane().add(btnDelete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 500, -1, -1));
+        btnDelete1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDelete1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnDelete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 500, -1, -1));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setOpaque(true);
@@ -160,6 +167,10 @@ public class MyOrderGUI extends javax.swing.JFrame {
         int selectedRow = jTable1.getSelectedRow();
         txtOrder.setText(String.valueOf((selectedRow+1)));
     }//GEN-LAST:event_jTable1MouseClicked
+
+    private void btnDelete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelete1ActionPerformed
+        JOptionPane.showMessageDialog(null,"EL total a pagar es de "+ getprice());
+    }//GEN-LAST:event_btnDelete1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

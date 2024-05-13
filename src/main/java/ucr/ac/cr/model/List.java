@@ -125,7 +125,7 @@ public void eliminarUltimo()
 
     }
 }
-
+ 
 public void eliminarPosicion(int posicion)
 {
     if (cabeza != null) {
@@ -159,7 +159,12 @@ public String[][] getMatrixMeals() {
     Nodo nodo = cabeza;
     for (int i = 0; i < longitud; i++) {
         for (int j = 0; j < Meals.HEADER_MEALS.length; j++) {
-            matrixMeals[i][j] = nodo.obtenerMeals(i);
+            if(nodo.getMeal().getQuantity()>1 && j==1){
+                double precioTotal = nodo.getMeal().getQuantity()*nodo.getMeal().getPrice();
+                System.err.println("cantidad: "+ nodo.getMeal().getQuantity()+" Precio: "+nodo.getMeal().getPrice()+" Resultado: " + nodo.getMeal().getQuantity()*nodo.getMeal().getPrice());
+                nodo.getMeal().setPrice(precioTotal);
+            }
+            matrixMeals[i][j] = nodo.obtenerMeals(j);
         }
         nodo = nodo.getSiguiente();
     }
