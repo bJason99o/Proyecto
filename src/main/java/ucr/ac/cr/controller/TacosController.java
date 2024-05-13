@@ -32,9 +32,9 @@ public class TacosController implements ActionListener{
             break;
             case "Add":
                 
-                String dato= tacosGUI.getTipo();
-                list.insertarPrincipio(dato);
-                this.tacosGUI.dispose();
+//                String dato= tacosGUI.getTipo();
+//                list.insertarPrincipio(dato);
+//                this.tacosGUI.dispose();
                 
             break;
             case ">":

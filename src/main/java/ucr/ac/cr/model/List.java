@@ -21,18 +21,18 @@ public List()
     cabeza = null;
 }
 
-public void insertarPrincipio(String dato)
+public void insertarPrincipio(String dato, Meals comida)
 {
-    List list=new List();
-    Nodo nodo = new Nodo(dato);
+    Nodo nodo = new Nodo(dato, comida);
     nodo.setSiguiente(cabeza);
     cabeza = nodo;
     longitud++;
 }
 
-public void insertarFinal(String dato)
+
+public void insertarFinal(String dato,Meals comida)
 {
-    Nodo nodo = new Nodo(dato);
+     Nodo nodo = new Nodo(dato, comida);
     if (cabeza == null) {
         cabeza = nodo;
     } else {
@@ -44,10 +44,12 @@ public void insertarFinal(String dato)
     }
     longitud++;
 }
-
-public void insertarDespues(int posicion, String valor)
+public Nodo getCabeza() {
+        return cabeza;
+    }
+public void insertarDespues(int posicion, String valor,Meals comida)
 {
-    Nodo nodo = new Nodo(valor);
+    Nodo nodo = new Nodo(valor, comida);
     if (cabeza == null) {
         cabeza = nodo;
     } else {
@@ -104,6 +106,7 @@ public void eliminarPrincipio()
         longitud--;
     }
 }
+
 
 public void eliminarUltimo()
 {

@@ -33,9 +33,9 @@ public class BeveragesController implements ActionListener{
             break;
             case "Add":
                 
-                String dato= beveragesGUI.getTipo();
-                list.insertarPrincipio(dato);  
-                this.beveragesGUI.dispose();
+//                String dato= beveragesGUI.getTipo();
+//                list.insertarPrincipio(dato);  
+//                this.beveragesGUI.dispose();
                 
             break;
             case ">":

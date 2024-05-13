@@ -32,9 +32,9 @@ public class DessertsController implements ActionListener {
                 this.dessertsGUI.dispose();
             break;
             case "Add":
-                String dato= dessertsGUI.getTipo();
-                list.insertarPrincipio(dato);
-                this.dessertsGUI.dispose();
+//                String dato= dessertsGUI.getTipo();
+//                list.insertarPrincipio(dato);
+//                this.dessertsGUI.dispose();
             break;
             case ">":
                 this.dessertsGUI.nextDessert();

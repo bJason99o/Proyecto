@@ -13,15 +13,19 @@ public class Nodo {
     private Meals comida;
     private Nodo siguiente;
 
-public Nodo(String dato)
-{
+public Nodo(String dato, Meals comida) {
     this.dato = dato;
+    this.comida = comida;
     siguiente = null;
 }
+
 
 public String getDato()
 {
     return dato;
+}
+public Meals getMeal(){
+    return comida;
 }
 
 public void setDato(String dato)

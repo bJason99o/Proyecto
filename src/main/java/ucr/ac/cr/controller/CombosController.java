@@ -35,9 +35,9 @@ public class CombosController implements ActionListener{
             break;
             case "Add":
                 
-                String dato= combosGUI.getTipo();
-                list.insertarPrincipio(dato);
-                this.combosGUI.dispose();
+//                String dato= combosGUI.getTipo();
+//                list.insertarPrincipio(dato);
+//                this.combosGUI.dispose();
                 
             break;
             case ">":

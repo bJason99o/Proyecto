@@ -33,9 +33,9 @@ public class BurritosController implements ActionListener{
             break;
             case "Add":
                 
-                String dato= burritosGUI.getTipo();
-                list.insertarPrincipio(dato);                
-                this.burritosGUI.dispose();
+//                String dato= burritosGUI.getTipo();
+//                list.insertarPrincipio(dato);                
+//                this.burritosGUI.dispose();
         
             break;
             case ">":
