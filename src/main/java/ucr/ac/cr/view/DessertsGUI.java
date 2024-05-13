@@ -24,6 +24,13 @@ public class DessertsGUI extends javax.swing.JFrame {
         dessert = 1;
         inicio();
     }
+    
+    public int getCantidad(){
+        
+        int cantidad =(int) jsQuantity.getValue();
+        return cantidad;
+        
+    }
 
     public void listen(ActionListener controller) {
         this.btnExit.addActionListener(controller);

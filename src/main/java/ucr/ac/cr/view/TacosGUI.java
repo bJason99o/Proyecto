@@ -25,6 +25,13 @@ public class TacosGUI extends javax.swing.JFrame {
         inicio();
     }
 
+    public int getCantidad(){
+        
+        int cantidad =(int) jsQuantity.getValue();
+        return cantidad;
+        
+    }
+    
     public void listen(ActionListener controller) {
         this.btnNext.addActionListener(controller);
         this.btnExit.addActionListener(controller);

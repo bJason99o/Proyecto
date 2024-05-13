@@ -30,6 +30,13 @@ public class BurritosGUI extends javax.swing.JFrame {
         inicio();
         disableTxt();
     }
+    
+    public int getCantidad(){
+        
+        int cantidad =(int) jsQuantity.getValue();
+        return cantidad;
+        
+    }
 
     public void listen(ActionListener controller) {
         this.btnExit.addActionListener(controller);
