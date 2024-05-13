@@ -16,7 +16,9 @@ import ucr.ac.cr.model.List;
 public class DessertsController implements ActionListener {
     private DessertsGUI dessertsGUI;
     private List list;
-    public DessertsController() {
+    
+    public DessertsController(List list) {
+        this.list=list;
         this.dessertsGUI= new DessertsGUI();
         this.dessertsGUI.setVisible(true);
         this.dessertsGUI.listen(this);
@@ -30,10 +32,9 @@ public class DessertsController implements ActionListener {
                 this.dessertsGUI.dispose();
             break;
             case "Add":
-                this.dessertsGUI.dispose();
-                List list=new List();
                 String dato= dessertsGUI.getTipo();
                 list.insertarPrincipio(dato);
+                this.dessertsGUI.dispose();
             break;
             case ">":
                 this.dessertsGUI.nextDessert();

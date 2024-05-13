@@ -18,8 +18,8 @@ public class BurritosController implements ActionListener{
     private BurritosGUI burritosGUI;
     private List list;
 
-    public BurritosController() {
-         
+    public BurritosController(List list) {
+    this.list=list;
     this.burritosGUI= new BurritosGUI();
     this.burritosGUI.setVisible(true);
     this.burritosGUI.listen(this);
@@ -32,10 +32,10 @@ public class BurritosController implements ActionListener{
                 this.burritosGUI.dispose();
             break;
             case "Add":
-                List list=new List();
-                this.burritosGUI.dispose();
+                
                 String dato= burritosGUI.getTipo();
                 list.insertarPrincipio(dato);                
+                this.burritosGUI.dispose();
         
             break;
             case ">":

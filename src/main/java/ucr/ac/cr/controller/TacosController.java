@@ -15,10 +15,12 @@ import ucr.ac.cr.model.List;
 public class TacosController implements ActionListener{
     private TacosGUI tacosGUI;
     private List list;
-    public TacosController() {
-    this.tacosGUI= new TacosGUI();
-    this.tacosGUI.setVisible(true);
-    this.tacosGUI.listen(this);
+    
+    public TacosController(List list) {
+        this.list=list;
+        this.tacosGUI= new TacosGUI();
+        this.tacosGUI.setVisible(true);
+        this.tacosGUI.listen(this);
     }
 
     @Override
@@ -29,10 +31,11 @@ public class TacosController implements ActionListener{
                 this.tacosGUI.dispose();
             break;
             case "Add":
-                this.tacosGUI.dispose();
-                List list=new List();
+                
                 String dato= tacosGUI.getTipo();
                 list.insertarPrincipio(dato);
+                this.tacosGUI.dispose();
+                
             break;
             case ">":
                 this.tacosGUI.nextTaco();

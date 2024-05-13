@@ -17,10 +17,11 @@ public class CombosController implements ActionListener{
     private CombosGUI combosGUI;
       private List list;
 
-    public CombosController() {
-    this.combosGUI= new CombosGUI();
-    this.combosGUI.setVisible(true);
-    this.combosGUI.listen(this);
+    public CombosController(List list) {
+        this.list=list;
+        this.combosGUI= new CombosGUI();
+        this.combosGUI.setVisible(true);
+        this.combosGUI.listen(this);
             
     }
 
@@ -33,10 +34,11 @@ public class CombosController implements ActionListener{
                 
             break;
             case "Add":
-                List list=new List();
-                this.combosGUI.dispose();
+                
                 String dato= combosGUI.getTipo();
                 list.insertarPrincipio(dato);
+                this.combosGUI.dispose();
+                
             break;
             case ">":
                 this.combosGUI.nextCombo();

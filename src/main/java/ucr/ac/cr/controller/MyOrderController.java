@@ -17,7 +17,8 @@ public class MyOrderController implements ActionListener{
     private List list;
     
 
-    public MyOrderController() {
+    public MyOrderController(List list) {
+    this.list = list;
     this.myOrderGUI= new MyOrderGUI();
     this.myOrderGUI.setTable(Meals.HEADER_MEALS, this.list.getMatrixMeals());
     this.myOrderGUI.setVisible(true);

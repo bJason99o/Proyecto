@@ -17,7 +17,8 @@ public class BeveragesController implements ActionListener{
     private BeveragesGUI beveragesGUI;
   private List list;
   
-    public BeveragesController() {
+    public BeveragesController(List list) {
+        this.list=list;
         this.beveragesGUI= new BeveragesGUI();
         this.beveragesGUI.setVisible(true);
         this.beveragesGUI.listen(this);
@@ -31,10 +32,10 @@ public class BeveragesController implements ActionListener{
                 this.beveragesGUI.dispose();
             break;
             case "Add":
-                List list=new List();
-                this.beveragesGUI.dispose();
+                
                 String dato= beveragesGUI.getTipo();
                 list.insertarPrincipio(dato);  
+                this.beveragesGUI.dispose();
                 
             break;
             case ">":

@@ -6,7 +6,7 @@ package ucr.ac.cr.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import ucr.ac.cr.model.List;
 import ucr.ac.cr.view.MainGUI;
 
 
@@ -15,7 +15,7 @@ import ucr.ac.cr.view.MainGUI;
  * @author Jason
  */
 public class MainController implements ActionListener{
-
+    private List list;
     private MainGUI mainGUI;
     private BurritosController burritosController;
     private TacosController tacosController;
@@ -25,6 +25,7 @@ public class MainController implements ActionListener{
     private MyOrderController myOrderController;
 
     public MainController() {
+    list= new List();
     this.mainGUI= new MainGUI();
     this.mainGUI.setVisible(true);
     this.mainGUI.listen(this);
@@ -35,22 +36,22 @@ public class MainController implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Burritos":
-                this.burritosController=new BurritosController();
+                this.burritosController=new BurritosController(list);
             break;
             case "Tacos":
-                this.tacosController=new TacosController();
+                this.tacosController=new TacosController(list);
             break;
             case "Beverages":
-                this.beveragesController= new BeveragesController();
+                this.beveragesController= new BeveragesController(list);
             break;
             case "Desserts":
-                this.dessertsController= new DessertsController();
+                this.dessertsController= new DessertsController(list);
             break;
             case "Combos":
-                this.combosController= new CombosController();
+                this.combosController= new CombosController(list);
             break;
             case "My Order":
-                this.myOrderController=new MyOrderController();
+                this.myOrderController=new MyOrderController(list);
             break;
             case "Exit":
                 System.exit(0);
