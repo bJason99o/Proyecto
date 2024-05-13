@@ -6,6 +6,7 @@ package ucr.ac.cr.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import ucr.ac.cr.model.JsonClass;
 import ucr.ac.cr.view.TacosGUI;
 import ucr.ac.cr.model.List;
 import ucr.ac.cr.model.Meals;
@@ -16,9 +17,11 @@ import ucr.ac.cr.model.Meals;
 public class TacosController implements ActionListener{
     private TacosGUI tacosGUI;
     private List list;
+    private JsonClass jsonClass;
     
     public TacosController(List list) {
         this.list=list;
+        this.jsonClass= new JsonClass();
         this.tacosGUI= new TacosGUI();
         this.tacosGUI.setVisible(true);
         this.tacosGUI.listen(this);
@@ -32,11 +35,13 @@ public class TacosController implements ActionListener{
                 this.tacosGUI.dispose();
             break;
             case "Add":
-               String dato= tacosGUI.getTipo();
-                int cantidad = tacosGUI.getCantidad();
-                Meals comida = new Meals(dato, dato, cantidad, cantidad);
-                list.insertarPrincipio(dato, comida);                
-                this.tacosGUI.dispose();
+               String dato = tacosGUI.getTipo();
+                Meals nuevaComida = tacosGUI.getProduct();
+                list.insertarPrincipio(dato, nuevaComida);
+                jsonClass.saveLinkedListToJson(list);
+                tacosGUI.clean();
+                System.out.println(list);
+                System.out.println(jsonClass.loadMealsFromJson());
                 
             break;
             case ">":

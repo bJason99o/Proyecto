@@ -6,6 +6,7 @@ package ucr.ac.cr.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import ucr.ac.cr.model.JsonClass;
 import ucr.ac.cr.view.DessertsGUI;
 import ucr.ac.cr.model.List;
 import ucr.ac.cr.model.Meals;
@@ -17,9 +18,11 @@ import ucr.ac.cr.model.Meals;
 public class DessertsController implements ActionListener {
     private DessertsGUI dessertsGUI;
     private List list;
+    private JsonClass jsonClass;
     
     public DessertsController(List list) {
         this.list=list;
+        this.jsonClass= new JsonClass();
         this.dessertsGUI= new DessertsGUI();
         this.dessertsGUI.setVisible(true);
         this.dessertsGUI.listen(this);
@@ -33,11 +36,13 @@ public class DessertsController implements ActionListener {
                 this.dessertsGUI.dispose();
             break;
             case "Add":
-                     String dato= dessertsGUI.getTipo();
-                int cantidad = dessertsGUI.getCantidad();
-                Meals comida = new Meals(dato, dato, cantidad, cantidad);
-                list.insertarPrincipio(dato ,comida);                
-                this.dessertsGUI.dispose();
+                     String dato = dessertsGUI.getTipo();
+                Meals nuevaComida = dessertsGUI.getProduct();
+                list.insertarPrincipio(dato, nuevaComida);
+                jsonClass.saveLinkedListToJson(list);
+                dessertsGUI.clean();
+                System.out.println(list);
+                System.out.println(jsonClass.loadMealsFromJson());
             break;
             case ">":
                 this.dessertsGUI.nextDessert();

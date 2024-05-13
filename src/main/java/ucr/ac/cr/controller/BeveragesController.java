@@ -7,6 +7,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import ucr.ac.cr.model.JsonClass;
 import ucr.ac.cr.view.BeveragesGUI;
 import ucr.ac.cr.model.List;
 import ucr.ac.cr.model.Meals;
@@ -17,9 +18,11 @@ import ucr.ac.cr.model.Meals;
 public class BeveragesController implements ActionListener{
     private BeveragesGUI beveragesGUI;
   private List list;
+  private JsonClass jsonClass;
   
     public BeveragesController(List list) {
         this.list=list;
+        this.jsonClass= new JsonClass();
         this.beveragesGUI= new BeveragesGUI();
         this.beveragesGUI.setVisible(true);
         this.beveragesGUI.listen(this);
@@ -33,11 +36,13 @@ public class BeveragesController implements ActionListener{
                 this.beveragesGUI.dispose();
             break;
             case "Add":
-                  String dato= beveragesGUI.getTipo();
-                int cantidad = beveragesGUI.getCantidad();
-                Meals comida = new Meals(dato, dato, cantidad, cantidad);
-                list.insertarPrincipio(dato, comida);                
-                this.beveragesGUI.dispose();
+                  String dato = beveragesGUI.getTipo();
+                Meals nuevaComida = beveragesGUI.getProduct();
+                list.insertarPrincipio(dato, nuevaComida);
+                jsonClass.saveLinkedListToJson(list);
+                beveragesGUI.clean();
+                System.out.println(list);
+                System.out.println(jsonClass.loadMealsFromJson());
             break;
             case ">":
                 this.beveragesGUI.nextBeverage();

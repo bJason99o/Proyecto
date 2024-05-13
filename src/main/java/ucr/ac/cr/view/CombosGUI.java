@@ -5,6 +5,8 @@
 package ucr.ac.cr.view;
 
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import ucr.ac.cr.model.Meals;
 
 /**
  *
@@ -23,16 +25,16 @@ public class CombosGUI extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         combo = 1;
         inicio();
+        disableTxt();
     }
 
-    
-    public int getCantidad(){
-        
-        int cantidad =(int) jsQuantity.getValue();
+    public int getCantidad() {
+
+        int cantidad = (int) jsQuantity.getValue();
         return cantidad;
-        
+
     }
-    
+
     public void listen(ActionListener controller) {
         this.btnExit.addActionListener(controller);
         this.btnNext.addActionListener(controller);
@@ -55,6 +57,14 @@ public class CombosGUI extends javax.swing.JFrame {
             btnAdd.setVisible(false);
             cbSelectCombos.setVisible(false);
             jsQuantity.setVisible(false);
+            lbId.setVisible(true);
+            lbPrice.setVisible(true);
+            txtIdMeal.setVisible(false);
+            txtIdMeal1.setVisible(true);
+            txtIdMeal2.setVisible(false);
+            txtPrice.setVisible(false);
+            txtPrice1.setVisible(true);
+            txtPrice2.setVisible(false);
         }
         if (combo == 3) {
             lbNameCombos.setText("Combo 3");
@@ -65,6 +75,14 @@ public class CombosGUI extends javax.swing.JFrame {
             btnAdd.setVisible(false);
             cbSelectCombos.setVisible(false);
             jsQuantity.setVisible(false);
+            lbId.setVisible(true);
+            lbPrice.setVisible(true);
+            txtIdMeal.setVisible(false);
+            txtIdMeal1.setVisible(false);
+            txtIdMeal2.setVisible(true);
+            txtPrice.setVisible(false);
+            txtPrice1.setVisible(false);
+            txtPrice2.setVisible(true);
         }
         if (combo == 4) {
             lbNameCombos.setText("Select Combo");
@@ -75,6 +93,14 @@ public class CombosGUI extends javax.swing.JFrame {
             btnAdd.setVisible(true);
             cbSelectCombos.setVisible(true);
             jsQuantity.setVisible(true);
+            lbId.setVisible(false);
+            lbPrice.setVisible(false);
+            txtIdMeal.setVisible(false);
+            txtIdMeal1.setVisible(false);
+            txtIdMeal2.setVisible(false);
+            txtPrice.setVisible(false);
+            txtPrice1.setVisible(false);
+            txtPrice2.setVisible(false);
         }
         if (combo == 5) {
             inicio();
@@ -102,6 +128,14 @@ public class CombosGUI extends javax.swing.JFrame {
             btnAdd.setVisible(false);
             cbSelectCombos.setVisible(false);
             jsQuantity.setVisible(false);
+            lbId.setVisible(true);
+            lbPrice.setVisible(true);
+            txtIdMeal.setVisible(false);
+            txtIdMeal1.setVisible(true);
+            txtIdMeal2.setVisible(false);
+            txtPrice.setVisible(false);
+            txtPrice1.setVisible(true);
+            txtPrice2.setVisible(false);
         }
         if (combo == 3) {
             lbNameCombos.setText("Combo 3");
@@ -112,6 +146,14 @@ public class CombosGUI extends javax.swing.JFrame {
             btnAdd.setVisible(false);
             cbSelectCombos.setVisible(false);
             jsQuantity.setVisible(false);
+             lbId.setVisible(true);
+            lbPrice.setVisible(true);
+            txtIdMeal.setVisible(false);
+            txtIdMeal1.setVisible(false);
+            txtIdMeal2.setVisible(true);
+            txtPrice.setVisible(false);
+            txtPrice1.setVisible(false);
+            txtPrice2.setVisible(true);
         }
         if (combo == 4) {
             lbNameCombos.setText("Select Combo");
@@ -122,6 +164,14 @@ public class CombosGUI extends javax.swing.JFrame {
             btnAdd.setVisible(true);
             cbSelectCombos.setVisible(true);
             jsQuantity.setVisible(true);
+            lbId.setVisible(false);
+            lbPrice.setVisible(false);
+            txtIdMeal.setVisible(false);
+            txtIdMeal1.setVisible(false);
+            txtIdMeal2.setVisible(false);
+            txtPrice.setVisible(false);
+            txtPrice1.setVisible(false);
+            txtPrice2.setVisible(false);
         }
         if (combo == 5) {
             inicio();
@@ -138,11 +188,86 @@ public class CombosGUI extends javax.swing.JFrame {
         btnAdd.setVisible(false);
         cbSelectCombos.setVisible(false);
         jsQuantity.setVisible(false);
-
+        lbId.setVisible(true);
+        lbPrice.setVisible(true);
+        txtIdMeal.setVisible(true);
+        txtIdMeal1.setVisible(false);
+        txtIdMeal2.setVisible(false);
+        txtPrice.setVisible(true);
+        txtPrice1.setVisible(false);
+        txtPrice2.setVisible(false);
     }
-    public String getTipo(){
+    public void clean(){
+        cbSelectCombos.setSelectedIndex(0);
+        jsQuantity.setValue(0);
+    }
+
+    public String getTipo() {
         return this.cbSelectCombos.getSelectedItem().toString();
     }
+    
+      public void disableTxt() {
+        this.txtIdMeal.setEnabled(false);
+        this.txtIdMeal1.setEnabled(false);
+        this.txtIdMeal2.setEnabled(false);
+      
+        this.txtPrice.setEnabled(false);
+        this.txtPrice1.setEnabled(false);
+        this.txtPrice2.setEnabled(false);
+       
+    }
+
+    public Meals getProduct() {
+        Meals meal = null;
+        String selectedItem = cbSelectCombos.getSelectedItem() != null ? cbSelectCombos.getSelectedItem().toString() : "";
+
+        if ("Combo 1".equals(selectedItem)) {
+            try {
+                String id = txtIdMeal.getText();
+                String name = selectedItem;
+                int quantity = (int) jsQuantity.getValue();
+                double price = Double.parseDouble(txtPrice.getText());
+
+                meal = new Meals(id, name, quantity, price);
+            } catch (NumberFormatException e) {
+                // Manejar la excepción si ocurre un error al convertir a números
+                e.printStackTrace(); // Otra acción según sea necesario
+            }
+        } else if ("Combo 2".equals(selectedItem)) {
+            try {
+                String id = txtIdMeal1.getText();
+                String name = selectedItem;
+                int quantity = (int) jsQuantity.getValue();
+                double price = Double.parseDouble(txtPrice1.getText());
+
+                meal = new Meals(id, name, quantity, price);
+            } catch (NumberFormatException e) {
+                // Manejar la excepción si ocurre un error al convertir a números
+                e.printStackTrace(); // Otra acción según sea necesario
+            }
+        } else if ("Combo 3".equals(selectedItem)) {
+            try {
+                String id = txtIdMeal2.getText();
+                String name = selectedItem;
+                int quantity = (int) jsQuantity.getValue();
+                double price = Double.parseDouble(txtPrice2.getText());
+
+                meal = new Meals(id, name, quantity, price);
+            } catch (NumberFormatException e) {
+                // Manejar la excepción si ocurre un error al convertir a números
+                e.printStackTrace(); // Otra acción según sea necesario
+            }
+        } else {
+            // Lógica para otros tipos de burritos o cuando no se selecciona "Burrito bowl"
+            // Por ejemplo, podrías mostrar un mensaje de error o simplemente crear un objeto Meals vacío
+            JOptionPane.showMessageDialog(null, "Seleccione un burrito válido.");
+            // Crear un objeto Meals vacío
+            meal = new Meals("", "", 0, 0.0);
+        }
+
+        return meal;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -156,6 +281,14 @@ public class CombosGUI extends javax.swing.JFrame {
         lbNameCombos = new javax.swing.JLabel();
         btnPrevious = new javax.swing.JButton();
         btnNext = new javax.swing.JButton();
+        lbId = new javax.swing.JLabel();
+        txtIdMeal2 = new javax.swing.JFormattedTextField();
+        txtPrice2 = new javax.swing.JFormattedTextField();
+        txtIdMeal1 = new javax.swing.JFormattedTextField();
+        txtPrice1 = new javax.swing.JFormattedTextField();
+        txtIdMeal = new javax.swing.JFormattedTextField();
+        txtPrice = new javax.swing.JFormattedTextField();
+        lbPrice = new javax.swing.JLabel();
         cbSelectCombos = new javax.swing.JComboBox<>();
         jsQuantity = new javax.swing.JSpinner();
         btnAdd = new javax.swing.JButton();
@@ -202,6 +335,87 @@ public class CombosGUI extends javax.swing.JFrame {
         btnNext.setBorderPainted(false);
         btnNext.setFocusPainted(false);
         getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 540, 50, -1));
+
+        lbId.setBackground(new java.awt.Color(255, 255, 255));
+        lbId.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
+        lbId.setForeground(new java.awt.Color(238, 236, 208));
+        lbId.setText("ID:");
+        getContentPane().add(lbId, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 540, 30, 30));
+
+        txtIdMeal2.setBackground(new java.awt.Color(149, 38, 36));
+        txtIdMeal2.setForeground(new java.awt.Color(238, 236, 208));
+        try {
+            txtIdMeal2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        txtIdMeal2.setText("5-03");
+        txtIdMeal2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        getContentPane().add(txtIdMeal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 540, -1, 30));
+
+        txtPrice2.setBackground(new java.awt.Color(149, 38, 36));
+        txtPrice2.setForeground(new java.awt.Color(238, 236, 208));
+        txtPrice2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
+        txtPrice2.setText("21.50");
+        txtPrice2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        txtPrice2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPrice2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtPrice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 540, -1, 30));
+
+        txtIdMeal1.setBackground(new java.awt.Color(149, 38, 36));
+        txtIdMeal1.setForeground(new java.awt.Color(238, 236, 208));
+        try {
+            txtIdMeal1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        txtIdMeal1.setText("5-02");
+        txtIdMeal1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        getContentPane().add(txtIdMeal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 540, -1, 30));
+
+        txtPrice1.setBackground(new java.awt.Color(149, 38, 36));
+        txtPrice1.setForeground(new java.awt.Color(238, 236, 208));
+        txtPrice1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
+        txtPrice1.setText("21.00");
+        txtPrice1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        txtPrice1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPrice1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtPrice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 540, -1, 30));
+
+        txtIdMeal.setBackground(new java.awt.Color(149, 38, 36));
+        txtIdMeal.setForeground(new java.awt.Color(238, 236, 208));
+        try {
+            txtIdMeal.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        txtIdMeal.setText("5-01");
+        txtIdMeal.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        getContentPane().add(txtIdMeal, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 540, -1, 30));
+
+        txtPrice.setBackground(new java.awt.Color(149, 38, 36));
+        txtPrice.setForeground(new java.awt.Color(238, 236, 208));
+        txtPrice.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
+        txtPrice.setText("20.50");
+        txtPrice.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        txtPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPriceActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 540, -1, 30));
+
+        lbPrice.setBackground(new java.awt.Color(255, 255, 255));
+        lbPrice.setFont(new java.awt.Font("Trebuchet MS", 3, 18)); // NOI18N
+        lbPrice.setForeground(new java.awt.Color(238, 236, 208));
+        lbPrice.setText("Price:");
+        getContentPane().add(lbPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 540, 70, 30));
 
         cbSelectCombos.setBackground(new java.awt.Color(102, 38, 36));
         cbSelectCombos.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
@@ -253,6 +467,18 @@ public class CombosGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPriceActionPerformed
+
+    private void txtPrice1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrice1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPrice1ActionPerformed
+
+    private void txtPrice2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrice2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPrice2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -271,6 +497,14 @@ public class CombosGUI extends javax.swing.JFrame {
     private javax.swing.JLabel lbCombo2;
     private javax.swing.JLabel lbCombo3;
     private javax.swing.JLabel lbCombos;
+    private javax.swing.JLabel lbId;
     private javax.swing.JLabel lbNameCombos;
+    private javax.swing.JLabel lbPrice;
+    private javax.swing.JFormattedTextField txtIdMeal;
+    private javax.swing.JFormattedTextField txtIdMeal1;
+    private javax.swing.JFormattedTextField txtIdMeal2;
+    private javax.swing.JFormattedTextField txtPrice;
+    private javax.swing.JFormattedTextField txtPrice1;
+    private javax.swing.JFormattedTextField txtPrice2;
     // End of variables declaration//GEN-END:variables
 }
